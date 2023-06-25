@@ -1,5 +1,8 @@
 <template>
   <div>
+
+      <!-- <NavBar/> -->
+    
     <BackgroundCarousel/>
 
   </div>
@@ -7,14 +10,17 @@
 
 <script>
 import BackgroundCarousel from '../components/BackgroundCarousel.vue';
+// import NavBar from '../components/NavBar.vue';
   export default {
     components: {
-      BackgroundCarousel
+      BackgroundCarousel,
+      // NavBar
 
     }
   }
 </script>
 
 <style scoped>
+
 
 </style>

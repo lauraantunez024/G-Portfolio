@@ -1,9 +1,6 @@
 <template>
   <div>
-
-      <!-- <NavBar/> -->
-    
-    <BackgroundCarousel/>
+    probaBLY an about me idk
 
   </div>
 </template>

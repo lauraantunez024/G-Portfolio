@@ -75,7 +75,8 @@ ul {
     left: 8%;
     background-color: white;
     border: 3px solid black;
-    list-style: none;
+    list-style-type: none;
+    padding: 0;
 }
 
 

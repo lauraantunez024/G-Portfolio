@@ -1,6 +1,6 @@
 <template>
     <div>
-        <h1> some shit</h1>
+        <h1> some graphic design shit</h1>
     </div>
 </template>
 

@@ -6,10 +6,9 @@
 </template>
 
 <script>
-    export default {
-        name: 'AudioView'
-        
-    }
+export default {
+    name: 'AudioView'
+}
 </script>
 
 <style scoped>

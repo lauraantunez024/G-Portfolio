@@ -26,14 +26,6 @@ export default {
 
         }
     },
-    // methods: {
-    //     showDropDown() {
-    //         this.showDropdown = true
-    //     },
-    //     hideDropdown() {
-    //         this.showDropdown = false
-    //     }
-    // }
 
 
 }
@@ -57,6 +49,7 @@ img {
     position: absolute;
     left: 48%;
     top: -10%;
+    margin-top: 15px;
 }
 
 button {
@@ -77,14 +70,14 @@ ul {
     border: 3px solid black;
     list-style-type: none;
     padding: 0;
+    margin: 0;
 }
 
 
 .links {
     position: relative;
     top: 24%;
-    
-
+    z-index: 100;
 }
 
 li {
@@ -101,6 +94,7 @@ li.dropdown-items {
 
 .dropdown {
     position: relative;
+    z-index: 100;
 }
 
 

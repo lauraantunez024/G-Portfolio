@@ -97,8 +97,6 @@ li.dropdown-items {
     z-index: 100;
 }
 
-
-
 .dropdown-items {
     left: 5%;
 }

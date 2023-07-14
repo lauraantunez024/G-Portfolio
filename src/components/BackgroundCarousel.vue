@@ -240,11 +240,11 @@ p {
 
 
 .slide-fade-enter-active {
-  transition: all 100s ease-out;
+  transition: all 10s ease-out;
 }
 
 .slide-fade-leave-active {
-  transition: all 0.8s cubic-bezier(1, 0.5, 0.8, 1);
+  transition: all 10s cubic-bezier(1, 0.5, 0.8, 1);
 }
 
 .slide-fade-enter-from,

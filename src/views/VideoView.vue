@@ -1,6 +1,10 @@
 <template>
     <div>
-       <BackgroundCarousel/>
+       <BackgroundCarousel>
+        <template #default>
+            <h1> this is a video page</h1>
+        </template>
+       </BackgroundCarousel>
 
 
     </div>

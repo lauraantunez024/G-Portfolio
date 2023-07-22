@@ -8,12 +8,12 @@
                     <ul class="dropdown-items" v-if="showDropdown" @mouseleave="showDropdown = false">
                         <li><router-link to="/projects/videos">Video</router-link></li>
                         <li><router-link to="/projects/audio">Audio</router-link></li>
-                        <li><router-link to="/projects/graphicDesign">Graphic Design</router-link></li>
+                        <li><router-link to="/projects/graphic-design">Graphic Design</router-link></li>
                     </ul>
                 </span>
                 <router-link to="/contact">Contact</router-link>
             </div>
-            <img height='150' src="../assets/mothman_cute.png" alt="cute mothman icon">
+            <img height='250' src="../assets/mothman_cute.png" alt="cute mothman icon">
     </nav>
 </template>
 
@@ -47,8 +47,8 @@ export default {
 img {
     margin: auto;
     position: absolute;
-    left: 48%;
-    top: -10%;
+    left: 47%;
+    top: -20%;
     margin-top: 15px;
 }
 
@@ -59,13 +59,13 @@ button {
 }
 
 button, .links {
-    font-size: 3rem;
+    font-size: 4rem;
 }
 
 ul {
     position: fixed;
     z-index: 100;
-    left: 8%;
+    left: 10%;
     background-color: white;
     border: 3px solid black;
     list-style-type: none;
@@ -98,6 +98,6 @@ li.dropdown-items {
 }
 
 .dropdown-items {
-    left: 5%;
+    left: 7%;
 }
 </style>

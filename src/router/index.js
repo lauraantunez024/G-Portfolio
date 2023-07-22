@@ -34,7 +34,7 @@ const router = createRouter({
       component: () => import('../views/AudioView.vue')
     },
     {
-      path: '/projects/graphicDesign',
+      path: '/projects/graphic-design',
       name: 'graphicDesign',
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route

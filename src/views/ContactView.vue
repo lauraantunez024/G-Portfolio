@@ -1,7 +1,6 @@
 <template>
-  <!-- <NavBar/> -->
   <div class="about">
-    <h1>This is a contact page</h1>
+    <h1>Yo whats up give grace all your money she rocks</h1>
   </div>
 </template>
 

@@ -158,6 +158,7 @@ export default {
 .caroussel-container {
     position: relative;
     width: 100%;
+    grid-template-columns: repeat(3, 1fr);
 
 }
 
@@ -166,7 +167,7 @@ export default {
     top: 169px;
     width: 100vw;
     margin: auto;
-    height: 100vh;
+    height: 40vh;
 }
 
 iframe {

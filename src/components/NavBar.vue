@@ -1,14 +1,14 @@
 <template>
     <nav class="navbar">
             <div class="links">
-                <router-link to="/">Home</router-link>
+                <router-link id="home" to="/">Home</router-link>
                 <span class="dropdown">
                     <button class="project-button" @mouseover="showDropdown = true">
                         Projects </button>
                     <ul class="dropdown-items" v-if="showDropdown" @mouseleave="showDropdown = false">
                         <li><router-link to="/projects/videos">Video</router-link></li>
                         <li><router-link to="/projects/audio">Audio</router-link></li>
-                        <li><router-link to="/projects/graphic-design">Graphic Design</router-link></li>
+                        <li><router-link to="/projects/graphic-design">Visual</router-link></li>
                     </ul>
                 </span>
                 <router-link to="/contact">Contact</router-link>
@@ -42,14 +42,18 @@ export default {
     height: 15vh;
     background-color: gray;
     top: 0;
+    display: grid;
+    grid-template-rows: auto auto;
 }
 
 img {
     margin: auto;
     position: absolute;
-    left: 47%;
-    top: -20%;
+    max-height: 90%;
+    left: 46.5%;
+
     margin-top: 15px;
+    display: flex;
 }
 
 button {
@@ -59,7 +63,8 @@ button {
 }
 
 button, .links {
-    font-size: 4rem;
+    font-size: 3rem;
+    margin-top: 15px;
 }
 
 ul {
@@ -81,7 +86,7 @@ ul {
 }
 
 li {
-    left: 5%;
+    margin-left: 15px;
 }
 .links a {
     padding: 10px;
@@ -99,5 +104,10 @@ li.dropdown-items {
 
 .dropdown-items {
     left: 7%;
+    width: 10%;
+}
+
+#home {
+    margin-left: 20px;
 }
 </style>

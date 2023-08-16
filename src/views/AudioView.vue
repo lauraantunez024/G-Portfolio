@@ -2,17 +2,17 @@
    
     <div class="container">
         <!-- Two buttons that will control the view whether podcasts are shown or sounds scapes v-show -->
-        <button  v-if="currentData[currentSlideIndex].type !== 'Podcasts' " class="nav-button" id="podcast" @click="chooseData('podcast')">
-                    Check out the Podcasts
-                </button>
-     
-                <button v-if="currentData[currentSlideIndex].type !== 'Soundscapes'" class="nav-button" id="soundscape" @click="chooseData('soundscape')">
-                    Enter the Soundscapes
-                </button>
-
-        <div>
-            <BackgroundCarousel>
-                <template #default>
+        
+        
+        <BackgroundCarousel>
+            <template #default>
+                    <button  v-if="currentData[currentSlideIndex].type !== 'Podcasts' " class="nav-button" id="podcast" @click="chooseData('podcast')">
+                                Check out the Podcasts
+                            </button>
+                 
+                            <button v-if="currentData[currentSlideIndex].type !== 'Soundscapes'" class="nav-button" id="soundscape" @click="chooseData('soundscape')">
+                                Enter the Soundscapes
+                            </button>
                     <h1> {{ currentType }} </h1>
                     <button class="btn-prev btn" @click="changeVideo('prev')">⬅️</button>
                     <div class="video-container" ref="scrollContainer" :style="currentBackground">
@@ -30,7 +30,6 @@
                     <button class="btn-next btn" @click="changeVideo('next')">➡️</button>
                 </template>
             </BackgroundCarousel>
-        </div>
 
     </div>
 </template>
@@ -69,20 +68,17 @@ export default {
                     },
                     titleImage: cowboy,
                     titleImageStyle: {
-                        left: '33%',
-                        top: '6%',
+                        margin: 'auto',
                         height: '17%',
+                        marginTop: '150px',
                         backgroundColor: 'rgba(155, 31, 31, 1)',
                     },
                     captionStyle: {
                         backgroundColor: 'rgba(0, 0, 0, 0.6)',
-                        left: '24.5%',
-                        top: '82%',
-                        maxWidth: '53%'
+                      
                     },
                     headerStyle: {
-                        left: '25%',
-                        fontSize: '2.75rem',
+                        fontSize: '2.5rem',
                         maxWidth: '2000px',
                         paddingLeft: '15px',
                         paddingRight: '15px',
@@ -90,10 +86,11 @@ export default {
 
                     },
                     pStyle: {
-                        font: '2rem',
+                        font: '1rem',
                         marginTop: '10px',
                         padding: '5px',
                         maxWidth: '1500px',
+                        marginTop: '25px'
                     }
                 },
                 {
@@ -107,16 +104,14 @@ export default {
                     },
                     titleImage: sweetThing,
                     titleImageStyle: {
-                        left: '40%',
+                        margin: 'auto',
                         height: '22%',
-                        top: '5%'
+                        
 
                     },
                     captionStyle: {
-                        top: '82%',
-                        left: '25%',
+                  
                         backgroundColor: 'rgba(82, 104, 46, 0.6)',
-                        maxWidth: '1500px'
 
                     },
                     headerStyle: {
@@ -124,6 +119,7 @@ export default {
 
                     },
                     pStyle: {
+                        marginTop: '20px'
 
                     }
                 },
@@ -139,19 +135,16 @@ export default {
                     },
                     titleImage: spencer,
                     titleImageStyle: {
-                        left: '38%'
+                        margin: 'auto',
                     },
                     headerStyle: {
                         fontFamily: 'Aviano Flare',
-                        left: '13%',
                         height: '15%'
 
 
                     },
                     captionStyle: {
-                        left: '25%',
                         maxWidth: '1500px',
-                        top: '82%'
                     },
                     pStyle: {
 
@@ -221,19 +214,16 @@ export default {
                         },
                         titleImage: cowboy,
                         titleImageStyle: {
-                            left: '33%',
-                            top: '6%',
+                            paddingTop: '15%',
                             height: '17%',
                             backgroundColor: 'rgba(155, 31, 31, 1)',
                         },
                         captionStyle: {
                             backgroundColor: 'rgba(0, 0, 0, 0.6)',
-                            left: '24.5%',
-                            top: '82%',
+                    
                             maxWidth: '53%'
                         },
                         headerStyle: {
-                            left: '25%',
                             fontSize: '2.75rem',
                             maxWidth: '2000px',
                             paddingLeft: '15px',
@@ -259,14 +249,11 @@ export default {
                         },
                         titleImage: sweetThing,
                         titleImageStyle: {
-                            left: '42%',
                             height: '22%',
-                            top: '5%'
 
                         },
                         captionStyle: {
-                            top: '82%',
-                            left: '25%',
+                  
                             backgroundColor: 'rgba(82, 104, 46, 0.6)',
                             maxWidth: '1500px'
 
@@ -276,6 +263,7 @@ export default {
 
                         },
                         pStyle: {
+                            marginTop: '50px'
 
                         }
                     },
@@ -295,17 +283,15 @@ export default {
                         },
                         headerStyle: {
                             fontFamily: 'Aviano Flare',
-                            left: '13%',
                             height: '15%'
 
 
                         },
                         captionStyle: {
-                            left: '25%',
                             maxWidth: '1500px',
-                            top: '82%'
                         },
                         pStyle: {
+                            marginTop: '40px'
 
                         }
                     }
@@ -345,6 +331,7 @@ export default {
 
                     },
                     pStyle: {
+                        marginTop: '20px'
 
                     }
                 },
@@ -381,6 +368,7 @@ export default {
 
                     },
                     pStyle: {
+                        marginTop: '20px'
 
                     }
                 }
@@ -396,25 +384,37 @@ export default {
 
 
 
-
 }
 </script>
 
 <style scoped>
+
+.container {
+display: inline-grid;
+
+  grid-template-rows: auto;
+  grid-template-columns: auto auto auto;
+  /* grid-template-areas: 
+  ". title ."
+  ". main ."
+  "caption caption caption"; */
+  grid-gap: 3px;
+  
+
+}
 .video-container {
-    position: relative;
-    top: 100px;
     width: 100vw;
-    margin: auto;
-    height: 100vh;
+    height: 80vh;
+    margin-top: 200px;
+
+
 }
 
 audio {
-    position: absolute;
-    left: 26%;
-    bottom: 20%;
     width: 50%;
     color: red;
+    margin: auto;
+    margin-left: 25%;
 }
 
 audio::-webkit-media-controls-panel {
@@ -429,28 +429,33 @@ audio::-webkit-media-controls-timeline {
 }
 
 .btn-prev {
-    position: absolute;
-    left: 15%;
     z-index: 100;
+    position: absolute;
+    left: 10%;
 }
 
 .btn-next {
-    position: absolute;
-    right: 15%;
+z-index: 100;
+position: absolute;
+right: 10%;
+}
+
+.btn-next, .btn-prev {
+    top: 50%;
 }
 
 img.thumbnail {
     height: 50%;
-    left: 33%;
     padding: 20px;
     margin: 10px;
-    position: absolute;
-    top: 24%;
+    grid-area: main;
+    display: flex;
+    margin: auto;
+
 }
 
 button {
     font-size: 4rem;
-    top: 60%;
     border-radius: 12px;
     padding: 15px;
     display: inline-block;
@@ -479,8 +484,7 @@ button {
 img {
     height: 20%;
     display: block;
-    top: 3%;
-    position: relative;
+    margin: auto;
 }
 
 .btn-prev:hover {
@@ -493,11 +497,11 @@ img {
     z-index: 150;
     background-color: white;
     font-size: 1.5rem;
-    top: 240px;
-    position: absolute;
-    left: 46%; 
     padding: 15px;
     margin-bottom: 10px;
+    position: absolute;
+    top: 15.5%;
+    left: 45%;
 }
 
 #soundscape:hover {
@@ -516,8 +520,15 @@ img {
 
 .caption {
     text-align: center;
-    position: absolute;
     padding: 15px;
+    grid-area: caption;
+    display: flex;
+    margin: auto;
+    max-width: 60%;
+    max-height: 27%;
+    margin-top: 15px;
+
+
 }
 
 h2 {
@@ -531,8 +542,7 @@ h1 {
     text-align: right;
     margin-right: 5%;
     font-size: 5rem;
-    top: 23px;
-    position: relative;
+    margin-top: 50px;
 }
 
 p {

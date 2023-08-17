@@ -3,30 +3,32 @@
         <form @submit.prevent="submitForm"> 
             <div>
                 <label>Name: </label>
-                <input type="text" v-model="form.name" required>
+                <input type="text" v-model="name" required>
             </div>
 
             <div>
-                <label>How do you want to talk</label> <br>
-                <input type="radio" id="phone" value="phone" v-model="form.contactMethod">
-                <label for="phone"> Phone</label> <br>
-                <input type="radio" id="email" value="email" v-model="form.contactMethod">
-                <label for="email"> Email</label>
+                <label>Come get these services baby girl!!!</label>
+                <br>
+                <input type="radio" id="phone" value="phone" v-model="contactMethod">
+                <label for="phone"> Phone Number:</label>
+                <br>
+                <input type="radio" id="email" value="email" v-model="contactMethod">
+                <label for="email"> Email:</label>
             </div>
 
-            <div v-if="form.contactMethod === 'phone'">
+            <div v-if="contactMethod === 'phone'">
                 <label>Phone: </label>
-                <input type="tel" v-model="form.phone" required>
+                <input type="tel" v-model="phone" required>
             </div>
 
-            <div v-if="form.contactMethod === 'email'">
+            <div v-if="contactMethod === 'email'">
                 <label>Email: </label>
-                <input type="email" v-model="form.email" required>
+                <input type="email" v-model="email" required>
             </div>
 
-            <div>
+            <div >
                 <label>what it do </label>
-                <input type="text" v-model="form.message" style="width: 200px" required>
+                <input type="text" v-model="message" style="width: 200px" required>
             </div>
 
             <button type="submit">Submit</button>
@@ -38,51 +40,50 @@
 
 <script>
 
-import axios from 'axios';
 
 export default {
     name: 'ContactForm',
     data() {
         return {
-            form: {
+           
                 name: '',
                 contactMethod: '',
-                phone: '',
                 email: '',
+                phone: '',
                 message: ''
         
-            }
+            
         }
     },
+ 
+
     methods: {
-        async submitForm() {
-            // Validation goes here
-            if (!this.name || !(this.email || this.phone) || !this.message) {
-                this.error = "All fields are required.";
-                return;
-            }
-            const formData = {
-                name: this.name,
-                contact: this.email || this.phone,
-                message: this.message
-            };
+    async submitForm() {
+        try {
+            const response = await fetch('http://localhost:3000/send-message', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    name: this.name,
+                    message: this.message,
+                    email: this.email,
+                    phone: this.phone
 
-            try {
-                const response = await axios.post('http://localhost:3000/contact', formData);
-                console.log(response.data);
-
-                this.name = '';
-                this.email = '';
-                this.phone = '';
-                this.message = '';
-                this.error = '';
-            } catch (error) {
-                console.error(error);
-                this.error = 'An error occurred while submitting the form'
+                })
+            });
+            const data = await response.json();
+            if(data.success) {
+                alert('Message sent!');
+            } else {
+                alert('Error sending message.');
             }
-   
+        } catch (error) {
+            alert('Failed to send message.');
         }
     }
+}
 }
 
 </script>
@@ -99,7 +100,6 @@ export default {
 input {
     height: 30px;
 }
-    
 
 
 </style>

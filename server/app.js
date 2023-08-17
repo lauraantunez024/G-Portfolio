@@ -23,29 +23,40 @@ app.get('/', (req, res) => {
 
 // })
 
-app.post('/contact', async(req, res) => {
-    const twiml = new MessagingResponse()
-    twiml.message('The Robots are coming! Head for the hills!');
-    res.type('text/xml').send(twiml.toString());
-    console.log('Received POST request at /contact');     
-    const form = req.body;
+// app.post('/contact', async(req, res) => {
+//     const twiml = new MessagingResponse()
+//     twiml.message('The Robots are coming! Head for the hills!');
+//     res.type('text/xml').send(twiml.toString());
+//     console.log('Received POST request at /contact');     
+//     const form = req.body;
 
-    try {
-        await client.messages
-        .create({
-            body: `New contact form submission from ${form.name} - ${form.message}`,
-            from: process.env.TWILIO_PHONE_NUMBER,
-            to: process.env.MY_PHONE_NUMBER
-        })
-        .then(message => console.log(message.sid))
-        .done();
+//     try {
+//         await client.messages
+//         .create({
+//             body: `New contact form submission from ${form.name} - ${form.message}`,
+//             from: process.env.TWILIO_PHONE_NUMBER,
+//             to: process.env.MY_PHONE_NUMBER
+//         })
+//         .then(message => console.log(message.sid))
+//         .done();
        
-    } catch (error) {
-        console.error('An error occurred while sending SMS:', error);
-        res.status(500).json({ error: 'An error occurred while sending a message'});
-    } 
-})
+//     } catch (error) {
+//         console.error('An error occurred while sending SMS:', error);
+//         res.status(500).json({ error: 'An error occurred while sending a message'});
+//     } 
+// })
 
 
+app.post('/send-message', (req, res) => {
+    const { name, message, phone, email } = req.body;
+
+    client.messages.create({
+        to: '+13057646528',
+        from: process.env.TWILIO_PHONE_NUMBER,
+        body: `Good news! Someone used your contact form :). The message is from ${name}: ${message}. They want to be reached out at ${phone} ${email}`,
+    })
+    .then((message) => res.json({ success: true}))
+    .catch((error) => res.json({ success: false, error }));
+});
 
 app.listen(3000, () => console.log("Server is running on port 3000"))

@@ -23,7 +23,7 @@ app.get('/', (req, res) => {
     res.json({ message: 'You got the server running congrats!'})
 });
 
-app.use('/', proxy)
+app.use('/send-message', proxy)
 
 
 

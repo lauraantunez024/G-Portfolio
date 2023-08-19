@@ -11,8 +11,10 @@ const { MessagingResponse } = twilio.twiml
 const app = express();
 
 const proxy = createProxyMiddleware({
-    target: 'http://www.gracer.vercel/send-message',
-    changeOrigin: true
+    target: 'https://www.gracer.vercel.app/',
+    changeOrigin: true,
+    pathFilter: '/contact'
+
 })
 app.use(cors())
 app.use(bodyParser.json());

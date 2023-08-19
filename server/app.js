@@ -30,7 +30,7 @@ app.use('/contact', proxy)
 
 
 
-app.post('/send-message', (req, res) => {
+app.post('/contact', (req, res) => {
     const { name, message, phone, email } = req.body;
 
     client.messages.create({

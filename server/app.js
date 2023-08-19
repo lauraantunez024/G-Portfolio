@@ -1,4 +1,5 @@
 const express = require('express');
+const { createProxyMiddleware } = require('http-proxy-middleware');
 const cors = require('cors');
 require('dotenv').config();
 const twilio = require('twilio');
@@ -9,6 +10,10 @@ const client = twilio(accountSid, authToken);
 const { MessagingResponse } = twilio.twiml
 const app = express();
 
+const proxy = createProxyMiddleware({
+    target: 'http://www.gracer.vercel.app/',
+    changeOrigin: true
+})
 app.use(cors())
 app.use(bodyParser.json());
 
@@ -18,33 +23,8 @@ app.get('/', (req, res) => {
     res.json({ message: 'You got the server running congrats!'})
 });
 
-// app.get('/api/contact', async (req, res) => {
-//     res.send('the get request for /api/contact is working')
+app.use('/', proxy)
 
-// })
-
-// app.post('/contact', async(req, res) => {
-//     const twiml = new MessagingResponse()
-//     twiml.message('The Robots are coming! Head for the hills!');
-//     res.type('text/xml').send(twiml.toString());
-//     console.log('Received POST request at /contact');     
-//     const form = req.body;
-
-//     try {
-//         await client.messages
-//         .create({
-//             body: `New contact form submission from ${form.name} - ${form.message}`,
-//             from: process.env.TWILIO_PHONE_NUMBER,
-//             to: process.env.MY_PHONE_NUMBER
-//         })
-//         .then(message => console.log(message.sid))
-//         .done();
-       
-//     } catch (error) {
-//         console.error('An error occurred while sending SMS:', error);
-//         res.status(500).json({ error: 'An error occurred while sending a message'});
-//     } 
-// })
 
 
 app.post('/send-message', (req, res) => {

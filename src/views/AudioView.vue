@@ -532,7 +532,7 @@ img {
     display: flex;
     margin: auto;
     left: 45%;
-    top: 9%;
+    top: 8%;
 }
 
 #soundscape:hover {

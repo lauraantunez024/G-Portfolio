@@ -6,6 +6,7 @@
         
         <BackgroundCarousel>
             <template #default>
+                <div class="button-container">
                     <button  v-if="currentData[currentSlideIndex].type !== 'Podcasts' " class="nav-button" id="podcast" @click="chooseData('podcast')">
                                 Check out the Podcasts
                             </button>
@@ -13,17 +14,18 @@
                             <button v-if="currentData[currentSlideIndex].type !== 'Soundscapes'" class="nav-button" id="soundscape" @click="chooseData('soundscape')">
                                 Enter the Soundscapes
                             </button>
+                </div>
                     <h1> {{ currentType }} </h1>
                     <button class="btn-prev btn" @click="changeVideo('prev')">⬅️</button>
                     <div class="video-container" ref="scrollContainer" :style="currentBackground">
-                        <span><img :src="currentTitleImage" alt="test" :style="currentTitleImageStyle"></span>
+                        <span><img class='title-image' :src="currentTitleImage" alt="test" :style="currentTitleImageStyle"></span>
                         <img v-if="currentData[currentSlideIndex].type === 'Podcasts'" class="thumbnail" src="../assets/podcast-thumbnail.png" alt="thumbnail">
                         <img v-else-if="currentData[currentSlideIndex].type === 'Soundscapes'" class="thumbnail" src="../assets/cover-to-cover.png" alt="thumbnail" style="left:30%">
                         <audio :src="currentAudio" type="audio/mpeg" controls>
                             Your browser not cool enough for this audio file :(
                         </audio>
                         <div class="caption" :style="currentCaptionStyle">
-                            <h2 :style="currentHeaderStyle"> {{ currentTitle }}</h2>
+                            <h2 :style="currentHeaderStyle"> {{ currentTitle }}</h2> 
                             <p :style="currentPStyle"> {{ currentDescription }}</p>
                         </div>
                     </div>
@@ -69,28 +71,30 @@ export default {
                     titleImage: cowboy,
                     titleImageStyle: {
                         margin: 'auto',
-                        height: '17%',
-                        marginTop: '150px',
+                        maxHeight: '17%',
                         backgroundColor: 'rgba(155, 31, 31, 1)',
                     },
                     captionStyle: {
-                        backgroundColor: 'rgba(0, 0, 0, 0.6)',
+                        // backgroundColor: 'rgba(0, 0, 0, 0.6)',
+                        maxHeight: '25%',
+                        marginTop: '15px'
                       
                     },
                     headerStyle: {
-                        fontSize: '2.5rem',
-                        maxWidth: '2000px',
+                        fontSize: '1.75rem',
+                        maxHeight: '25%',
                         paddingLeft: '15px',
                         paddingRight: '15px',
                         fontFamily: 'Cheltenham Condensed',
 
+
                     },
                     pStyle: {
                         font: '1rem',
-                        marginTop: '10px',
                         padding: '5px',
-                        maxWidth: '1500px',
-                        marginTop: '25px'
+                        maxWidth: '100%',
+                        borderLeft: '#CFCF39 3px solid'
+
                     }
                 },
                 {
@@ -111,7 +115,7 @@ export default {
                     },
                     captionStyle: {
                   
-                        backgroundColor: 'rgba(82, 104, 46, 0.6)',
+                        // backgroundColor: 'rgba(82, 104, 46, 0.6)',
 
                     },
                     headerStyle: {
@@ -119,7 +123,10 @@ export default {
 
                     },
                     pStyle: {
-                        marginTop: '20px'
+                        borderLeft: 'rgba(224, 184,  62) 3px solid',
+                        paddingLeft: '15px'
+
+
 
                     }
                 },
@@ -144,9 +151,15 @@ export default {
 
                     },
                     captionStyle: {
-                        maxWidth: '1500px',
+                        maxHeight: '25%',
+                        marginBottom: '10px'
+
                     },
                     pStyle: {
+                        borderLeft: '#FDF5AA 3px solid',
+                        paddingLeft: '25px'
+
+
 
                     }
                 }
@@ -214,28 +227,30 @@ export default {
                         },
                         titleImage: cowboy,
                         titleImageStyle: {
-                            paddingTop: '15%',
-                            height: '17%',
-                            backgroundColor: 'rgba(155, 31, 31, 1)',
+                            margin: 'auto',
+                        maxHeight: '15%',
+                        backgroundColor: 'rgba(155, 31, 31, 1)',
                         },
                         captionStyle: {
-                            backgroundColor: 'rgba(0, 0, 0, 0.6)',
+                            // backgroundColor: 'rgba(0, 0, 0, 0.6)',
+                            maxHeight: '25%',
+                        marginTop: '15px'
+
                     
-                            maxWidth: '53%'
                         },
                         headerStyle: {
-                            fontSize: '2.75rem',
-                            maxWidth: '2000px',
+                            fontSize: '1.5rem',
+                            maxWidth: '50%',
                             paddingLeft: '15px',
                             paddingRight: '15px',
                             fontFamily: 'Cheltenham Condensed',
 
                         },
                         pStyle: {
-                            font: '2rem',
-                            marginTop: '10px',
+                            font: '1.5rem',
                             padding: '5px',
-                            maxWidth: '1500px',
+                            borderLeft: '#CFCF39 3px solid'
+
                         }
                     },
                     {  
@@ -254,17 +269,15 @@ export default {
                         },
                         captionStyle: {
                   
-                            backgroundColor: 'rgba(82, 104, 46, 0.6)',
-                            maxWidth: '1500px'
+                            // backgroundColor: 'rgba(82, 104, 46, 0.6)',
+                            
 
                         },
                         headerStyle: {
                             fontFamily: 'Morgen'
-
                         },
                         pStyle: {
-                            marginTop: '50px'
-
+                            borderLeft: 'rgba(224, 184,  62) 3px solid'
                         }
                     },
                     {  
@@ -288,10 +301,12 @@ export default {
 
                         },
                         captionStyle: {
-                            maxWidth: '1500px',
+                            maxWidth: '100%',
+                            marginBottom: '15px'
                         },
                         pStyle: {
-                            marginTop: '40px'
+                            borderLeft: '#FDF5AA 3px solid'
+
 
                         }
                     }
@@ -317,21 +332,18 @@ export default {
                     },
                     headerStyle: {
                         fontFamily: 'Aviano Flare',
-                        left: '13%',
-                        
-                        
-                        
+                        left: '13%',  
+                        fontSize: '1.5rem'
                     },
                     captionStyle: {
-                        left: '25%',
-                        backgroundColor: 'rgba(236, 178, 169, 0.8)',
-                        maxWidth: '1500px',
-                        top: '82%',
-
-
+                        backgroundColor: 'rgba(236, 178, 169)',
+                        maxWidth: '100%',
+                        marginTop: '20px'
                     },
                     pStyle: {
-                        marginTop: '20px'
+                        borderLeft: 'black 3px solid',
+                        paddingLeft: '20px'
+
 
                     }
                 },
@@ -354,13 +366,15 @@ export default {
                     headerStyle: {
                         fontFamily: 'Aviano Flare',
                         left: '13%',
-                        height: '15%'
+                        height: '15%',
+                        fontSize: '1.25rem',
+                        paddingRight: '10px'
 
 
                     },
                     captionStyle: {
                         left: '25%',
-                        maxWidth: '1500px',
+                        maxWidth: '100%',
                         top: '82%',
                         backgroundColor: 'rgba(60, 103, 170, 0.8)',
 
@@ -368,7 +382,9 @@ export default {
 
                     },
                     pStyle: {
-                        marginTop: '20px'
+                        fontSize: '1rem',
+                        borderLeft: 'white 3px solid',
+
 
                     }
                 }
@@ -392,7 +408,7 @@ export default {
 .container {
 display: inline-grid;
 
-  grid-template-rows: auto;
+  grid-template-rows: auto auto;
   grid-template-columns: auto auto auto;
   /* grid-template-areas: 
   ". title ."
@@ -404,11 +420,18 @@ display: inline-grid;
 }
 .video-container {
     width: 100vw;
-    height: 80vh;
-    margin-top: 200px;
+    height: 70vh;
+    bottom: 40%;
 
 
 }
+
+.button-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
 
 audio {
     width: 50%;
@@ -454,8 +477,9 @@ img.thumbnail {
 
 }
 
+
 button {
-    font-size: 4rem;
+    font-size: 1rem;
     border-radius: 12px;
     padding: 15px;
     display: inline-block;
@@ -483,8 +507,8 @@ button {
 
 img {
     height: 20%;
-    display: block;
     margin: auto;
+    display: block;
 }
 
 .btn-prev:hover {
@@ -493,15 +517,22 @@ img {
     border-color: #FFFFFF;
 }
 
+.title-image {
+    display: flex;
+
+}
+
 .nav-button {
     z-index: 150;
     background-color: white;
-    font-size: 1.5rem;
+    font-size: 1rem;
     padding: 15px;
     margin-bottom: 10px;
     position: absolute;
-    top: 15.5%;
+    display: flex;
+    margin: auto;
     left: 45%;
+    top: 9%;
 }
 
 #soundscape:hover {
@@ -524,24 +555,21 @@ img {
     grid-area: caption;
     display: flex;
     margin: auto;
-    max-width: 60%;
-    max-height: 27%;
-    margin-top: 15px;
+
+    /* margin-top: 15px; */
 
 
 }
 
 h2 {
-    margin-top: 10px;
     font-weight: 600;
-    font-size: 2.5rem;
     display: block;
 }
 
 h1 {
     text-align: right;
     margin-right: 5%;
-    font-size: 5rem;
+    font-size: 3rem;
     margin-top: 50px;
 }
 
@@ -549,7 +577,8 @@ p {
     padding-bottom: 10px;
     z-index: 100;
 
-    font-size: 1.75rem;
+
+    font-size: 1.5rem;
 
 }
 </style>

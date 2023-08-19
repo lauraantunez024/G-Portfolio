@@ -51,7 +51,7 @@ app.post('/send-message', (req, res) => {
     const { name, message, phone, email } = req.body;
 
     client.messages.create({
-        to: '+13057646528',
+        to: process.env.MY_PHONE_NUMBER,
         from: process.env.TWILIO_PHONE_NUMBER,
         body: `Good news! Someone used your contact form :). The message is from ${name}: ${message}. They want to be reached out at ${phone} ${email}`,
     })

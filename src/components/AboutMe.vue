@@ -109,6 +109,7 @@ export default {
     grid-row-start: 2;
     grid-template-columns: 10% 50% 5% 25% 10%;
     grid-template-rows: repeat(4, 20%) 10% 10%;
+    background-color: rgb(238, 234, 234);
 
 }
 
@@ -118,6 +119,7 @@ export default {
     grid-row-start: 2;
     grid-row-end: 4;
     margin: auto;
+    margin-top: 10px;
     border: 2px rgb(61, 0, 61) solid;
     padding: 20px;
 }

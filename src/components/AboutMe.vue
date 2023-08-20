@@ -7,11 +7,11 @@
 
             <div class="aboutme-content">
                 <p>
-                    <!-- Grace is the best! You should hire her cause she's cute, funny, smart, a good friend, good with cars,
+                    Grace is the best! You should hire her cause she's cute, funny, smart, a good friend, good with cars,
                     and bonus: has the most precious smile. Oh yeah and she's good at like a million things, so :). Plus
                     she's
-                    a great cat mom and girlfriend. -->
-                    It's gonna be me
+                    a great cat mom and girlfriend.
+                    <!-- It's gonna be me
                     Ooh, yeah
                     You might been hurt, babe
                     That ain't no lie
@@ -55,7 +55,7 @@
                     You get to love
                     Guess what? (guess what?)
                     It's gonna be me
-                  
+                   -->
 
                 </p>
             </div>
@@ -120,7 +120,7 @@ export default {
     grid-row-end: 4;
     margin: auto;
     margin-top: 10px;
-    border: 2px rgb(61, 0, 61) solid;
+    /* border: 2px rgb(61, 0, 61) solid; */
     padding: 20px;
 }
 

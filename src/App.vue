@@ -15,6 +15,7 @@ export default {
 
 <template>
   <div class="wrapper">
+    
     <NavBar/>
 
     <RouterView />
@@ -22,6 +23,13 @@ export default {
 </template>
 
 <style scoped>
+
+.wrapper {
+  /* display: grid;
+  height: 100vh;
+  width: 100wv; */
+
+}
 
 
 

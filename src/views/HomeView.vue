@@ -1,19 +1,24 @@
 <template>
   <div>
-    probaBLY an about me idk
+      <AboutMe/>
+      <ServicesList/>
+
+      <MyTestimonials/>
 
   </div>
 </template>
 
 <script>
-import BackgroundCarousel from '../components/BackgroundCarousel.vue';
-// import NavBar from '../components/NavBar.vue';
+import AboutMe from '../components/AboutMe.vue';
+import MyTestimonials from '../components/MyTestimonials.vue';
+import ServicesList from '../components/ServicesList.vue';
+
   export default {
     components: {
-      BackgroundCarousel,
-      // NavBar
-
-    }
+    AboutMe,
+    MyTestimonials,
+    ServicesList
+}
   }
 </script>
 

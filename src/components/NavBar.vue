@@ -6,12 +6,12 @@
                     <button class="project-button" @mouseover="showDropdown = true">
                         Projects </button>
                     <ul class="dropdown-items" v-if="showDropdown" @mouseleave="showDropdown = false">
-                        <li><router-link to="/projects/videos">Video</router-link></li>
+                        <li><router-link to="/projects/videos">Visual</router-link></li>
                         <li><router-link to="/projects/audio">Audio</router-link></li>
-                        <li><router-link to="/projects/graphic-design">Visual</router-link></li>
+                        <!-- <li><router-link to="/projects/graphic-design">Visual</router-link></li> -->
                     </ul>
                 </span>
-                <router-link to="/contact">Contact</router-link>
+                <router-link id="contact" to="/contact">Contact</router-link>
             </div>
             <img height='250' src="../assets/mothman_cute.png" alt="cute mothman icon">
     </nav>
@@ -39,32 +39,47 @@ export default {
     left: 0;
     width: 100%;
     display: block;
-    height: 15vh;
-    background-color: gray;
+    height: 20vh;
+    background-color: rgb(61, 0, 61);
     top: 0;
-    display: grid;
-    grid-template-rows: auto auto;
+    display: inline-grid;
+    grid-template-columns: repeat(3, 33.33333%);
+    justify-self: center;
+    margin: auto;
+    grid-template-rows: auto;
 }
 
 img {
     margin: auto;
     position: absolute;
-    max-height: 90%;
-    left: 46.5%;
+    max-height: 70%;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    justify-self: center;
+    margin-top: 5%;
+    background-color: seagreen;
 
-    margin-top: 15px;
-    display: flex;
+    display: wrap;
 }
 
 button {
     border: none;
-    color: orange;
+    color: seagreen;
     background: none;
+}
+
+#contact, #home {
+    color: seagreen;
+}
+
+#contact {
+    grid-column-start: 3;
+    grid-column-end: 4;
 }
 
 button, .links {
     font-size: 3rem;
-    margin-top: 15px;
+    margin: auto;
 }
 
 ul {
@@ -81,7 +96,7 @@ ul {
 
 .links {
     position: relative;
-    top: 24%;
+    
     z-index: 100;
 }
 
@@ -90,7 +105,7 @@ li {
 }
 .links a {
     padding: 10px;
-    color: orange;
+    color: seagreen;
 }
 
 li.dropdown-items {
@@ -98,13 +113,15 @@ li.dropdown-items {
 }
 
 .dropdown {
-    position: relative;
-    z-index: 100;
+    display: inline;
+   
+    
 }
 
 .dropdown-items {
     left: 7%;
     width: 10%;
+    display: grid;
 }
 
 #home {

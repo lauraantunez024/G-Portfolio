@@ -95,6 +95,8 @@ export default {
     display: grid;
     gap: 1rem;
     font-size: 3rem;
+    border: 3px black solid;
+    padding: 15px;
 }
 
 input {

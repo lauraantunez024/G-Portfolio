@@ -3,12 +3,48 @@
 
         <div class="title">
 
+            <!-- Can make a v-if ton change the font size of social media marketing to an h2 tag -->
+
             <h1> {{ title }} </h1>
-            <button @click="showLine"> test button </button>
+            <!-- <button @click="showLine"> test button </button> -->
             
         </div>
-        <div class="animated-line" id="top">
-            <span id="line"></span>
+        <div id="top">
+            <svg width='100%' height='100%' viewBox='0 0 100 100' xmlns="http://www.w3.org/2000/svg" xmnls:xlink="http://www.w3.org/1999/xlink"> 
+               <line class="line" x1="-40" y1="100" x2="170" y2="0" style=" stroke: rgb(61, 0, 61); stroke-width: 5px; fill: none;"> 
+
+               </line>
+
+            </svg>
+        </div>
+        <div id="middle">
+            <svg width='100%' height='100%' viewBox='0 0 100 100' xmlns="http://www.w3.org/2000/svg" xmnls:xlink="http://www.w3.org/1999/xlink"> 
+               <line class="line" x1="-45" y1="50" x2="200" y2="50" style=" stroke: rgb(61, 0, 61); stroke-width: 5px; fill: none;"> 
+
+               </line>
+
+            </svg>
+        </div>
+        <div id="bottom">
+            <svg width='100%' height='100%' viewBox='0 0 100 100' xmlns="http://www.w3.org/2000/svg" xmnls:xlink="http://www.w3.org/1999/xlink"> 
+               <line class="line" x1="-40" y1="0" x2="300" y2="150" style=" stroke: rgb(61, 0, 61); stroke-width: 5px; fill: none;"> 
+               </line>
+            </svg>
+        </div>
+
+        <div class="first-bullet">
+            <h2 id="first-title"> {{ firstBullet }}</h2>
+
+        </div>
+        <div class="second-bullet">
+            <h2 id="second-title"> {{ secondBullet }}</h2>
+
+
+        </div>
+        <div class="third-bullet">
+            <h2 id="third-title"> {{ thirdBullet }}</h2>
+
+
         </div>
 
 
@@ -27,14 +63,22 @@ export default {
     props: {
         title: {
             type: String,
+            required: true
+        },
+        firstBullet: {
+            type: String,
+            required: true
+        },
+        secondBullet: {
+            type: String,
             // required: true
         },
-        descriptionTiles: {
-            type: Array,
+        thirdBullet: {
+            type: String,
             // required: true
         },
         detail: {
-            type: Object,
+            type: Array,
 
         }
 
@@ -43,7 +87,7 @@ export default {
         createTimeline() {
             const timeline = this.$anime.timeline({
                 duration: 2000,
-                easing: ''
+                easing: '   '
             })
         }
     }
@@ -83,8 +127,10 @@ export default {
     height: 100vh;
     grid-template-rows: repeat(5, 20%);
     grid-template-columns: 10% 30% 25% 25% 10%;
-    background-color: aqua;
+    background-color: gray;
 }
+
+
 
 /* .line {
     position: absolute;
@@ -103,41 +149,92 @@ export default {
     grid-row-start: 3;
     grid-row-end: 4;
     margin: auto;
+    color: whitesmoke;
+    display: flex;
 }
 
 h1 {
     font-size: 5rem;
 }
 
-.animated-line {
+.line {
+    animation: top-line 10s linear forwards; 
+    stroke-dasharray: 500;
+  stroke-dashoffset: 500;
+
+
+}
+
+h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    
+}
+
+#top{
     grid-column-start: 3;
     grid-column-end: 4;
     grid-row-start: 2;
     grid-row-end: 3;
-    /* width: 100%;
-    height: 100%; */
-    /* background-size: 20px 20px; */
-    width: 100%;
-    height: 5px;
-    background: repeating-linear-gradient(
-        to right,
-        black,
-        black 10px,
-        transparent 1px,
-        transparent 10px
-        );
-        background-size: 20px 2px;
-        animation: top-line 5s forwards;
-    
 }
+
+#middle {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 3;
+    grid-row-end: 4;
+
+}
+
+#bottom {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 4;
+    grid-row-end: 5;
+
+}
+
+.first-bullet {
+    grid-column-start: 4;
+    grid-column-end: 5;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+}
+#first-title {
+    grid-row-start: 2;
+}
+.second-bullet {
+    grid-column-start: 4;
+    grid-column-end: 5;
+    grid-row-start: 3;
+    grid-row-end: 4;
+}
+.third-bullet {
+    grid-column-start: 4;
+    grid-column-end: 5;
+    grid-row-start: 4;
+    grid-row-end: 5;
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+}
+
+#third-title {
+    grid-row-start: 4;
+}
+
+
 
 
 @keyframes top-line {
-    from {
-        background-position: -20px 0;
-    }
+
+    /* from {
+        stroke-dashoffset: 500;
+    } */
+
     to {
-        position: 0 50;
+        stroke-dashoffset: 0;
     }
     
 
@@ -145,39 +242,4 @@ h1 {
 
 
 
-/* .c-dashed-line__path {
-    animation: c-dashed-line-path 3s ease-in-out infinite alternate;
-    fill: none;
-    stroke: #31cc89;
-    stroke-dasharray: 940;
-    stroke-dashoffset: 940;
-    stroke-width: 10;
-}
-
-.c-dashed-line__dash {
-    fill: none;
-    stroke: aqua;
-    stroke-dasharray: 16 10;
-    stroke-width: 12;
-}
-
-@keyframes c-dashed-line-path {
-    from {
-        stroke-dashoffset: 940;
-    }
-    to {
-        stroke-dashoffset: 0;
-    }
-} */
-
-/* .dotted-line-enter-active, .dotted-line-leave-active {
-    transition: width 1s ease-out;
-}
-
-.dotted-line-enter-to {
-    width: 100%;
-}
-
-.dotted-line-leave-to {
-    width: 0; */
 </style>

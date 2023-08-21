@@ -1,9 +1,9 @@
 <template>
   <div>
     <AboutMe />
-    <ServicesList :title="Services[0].title"/>
-    <ServicesList :title="Services[1].title"/>
-    <ServicesList :title="Services[2].title"/>
+    <ServicesList :title="Services[0].title" :firstBullet="Services[0].descriptionTiles[0].text" :secondBullet="Services[0].descriptionTiles[1].text" :thirdBullet="Services[0].descriptionTiles[2].text"/>
+    <ServicesList :title="Services[1].title" :firstBullet="Services[1].descriptionTiles[0].text" :secondBullet="Services[1].descriptionTiles[1].text" :thirdBullet="Services[1].descriptionTiles[2].text"/>
+    <ServicesList :title="Services[2].title" :firstBullet="Services[2].descriptionTiles[0].text" :secondBullet="Services[2].descriptionTiles[1].text" :thirdBullet="Services[2].descriptionTiles[2].text"/>
 
     <MyTestimonials />
 
@@ -30,7 +30,7 @@ export default {
               ]
             },
             {
-              text: 'First Film Degree from Augusta University',
+              text: 'Film Degree from AU',
               details: [
                 'Graduated December 2023 with a degree in XXX',
                 'Screened a XXX minute long movie',

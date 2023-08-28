@@ -5,7 +5,7 @@
 
             <!-- Can make a v-if ton change the font size of social media marketing to an h2 tag -->
 
-            <h1> {{ title }} </h1>
+            <h1 class="animate__animated animate__bounce"> {{ title }} </h1>
             <!-- <button @click="showLine"> test button </button> -->
             
         </div>
@@ -34,15 +34,25 @@
 
         <div class="first-bullet">
             <h2 id="first-title"> {{ firstBullet }}</h2>
+            <ul v-for="(tile, index) in Services[0].descriptionTiles">
+                <li v-for="(detail, index) in tile.details" :key="index"> {{ detail }}</li>
+            </ul>
 
         </div>
         <div class="second-bullet">
             <h2 id="second-title"> {{ secondBullet }}</h2>
+            <!-- <ul>
+                <li v-for="(detail, index) in Services[1].descriptionTiles.details "></li>
+            </ul> -->
+
 
 
         </div>
         <div class="third-bullet">
             <h2 id="third-title"> {{ thirdBullet }}</h2>
+            <!-- <ul>
+                <li v-for="(detail, index) in Services[2].descriptionTiles.details "> </li>
+            </ul> -->
 
 
         </div>
@@ -67,7 +77,7 @@ export default {
         },
         firstBullet: {
             type: String,
-            required: true
+            // required: true
         },
         secondBullet: {
             type: String,
@@ -77,9 +87,8 @@ export default {
             type: String,
             // required: true
         },
-        detail: {
-            type: Array,
-
+        details: {
+            type: Array
         }
 
     },
@@ -168,6 +177,7 @@ h1 {
 h2 {
     font-size: 2.5rem;
     text-align: center;
+    font-weight: 500;
     
 }
 

@@ -1,10 +1,14 @@
 <template>
   <div>
     <AboutMe />
-    <ServicesList :title="Services[0].title" :firstBullet="Services[0].descriptionTiles[0].text" :secondBullet="Services[0].descriptionTiles[1].text" :thirdBullet="Services[0].descriptionTiles[2].text"/>
-    <ServicesList :title="Services[1].title" :firstBullet="Services[1].descriptionTiles[0].text" :secondBullet="Services[1].descriptionTiles[1].text" :thirdBullet="Services[1].descriptionTiles[2].text"/>
-    <ServicesList :title="Services[2].title" :firstBullet="Services[2].descriptionTiles[0].text" :secondBullet="Services[2].descriptionTiles[1].text" :thirdBullet="Services[2].descriptionTiles[2].text"/>
+        <!-- <ServicesList :title="Services[0].title" :firstBullet="Services[0].descriptionTiles[0].text" :secondBullet="Services[0].descriptionTiles[1].text" :thirdBullet="Services[0].descriptionTiles[2].text" :details="Services[0].descriptionTiles.details"/>
 
+      <ServicesList :title="Services[1].title" :firstBullet="Services[1].descriptionTiles[0].text" :secondBullet="Services[1].descriptionTiles[1].text" :thirdBullet="Services[1].descriptionTiles[2].text"/>
+      <ServicesList :title="Services[2].title" :firstBullet="Services[2].descriptionTiles[0].text" :secondBullet="Services[2].descriptionTiles[1].text" :thirdBullet="Services[2].descriptionTiles[2].text"/> -->
+          <ServicesList
+          v-for="service in services"
+          :key="service.id"
+          :title="service.title"/>
     <MyTestimonials />
 
   </div>

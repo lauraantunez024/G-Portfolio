@@ -7,10 +7,52 @@
 
             <div class="aboutme-content">
                 <p>
-                    Grace is the best! You should hire her cause she's cute, funny, smart, a good friend, good with cars,
+                    I went with you up to the place you grew up
+And we spent a week in the cold
+Just long enough to Walden it with you
+Any longer, it would've got old
+Singin' "Ace of Spades" when Lemmy died
+But nothing's changed, L.A.'s alright
+I'm sleepin' in my bed again
+And gettin' in my head and then
+Walk around the reservoir
+You
+You must've been lookin' for me
+Sendin' smoke signals
+Pelicans circling
+Burnin' trash out on the beach
+One of your eyes is always half-shut
+Somethin' happened when you were a kid
+I didn't know you then and I'll never understand
+Why it feels like I did
+"How Soon Is Now" in an eighties sedan
+You slept inside of it because your dad
+Lived in a campground in the back of a van
+You said that song'll creep you out until you're dead
+And you
+Must've been lookin' for me
+Sendin' smoke signals
+Pelicans circling
+Burnin' trash out on the beach
+I wanna live at the Holiday Inn
+Where somebody else makes the bed
+We'll watch TV while the lights on the street
+Put all the stars to death
+It's been on my mind since Bowie died
+Just checking out to hide from life
+And all of our problems, I'm gonna solve 'em
+With you ridin' shotgun
+Speeding 'cause fuck the cops
+And you
+You must've been lookin' for me
+Sendin' smoke signals
+Pelicans circling
+Burnin' trash out on the beach
+Mm-mm
+                    <!-- Grace is the best! You should hire her cause she's cute, funny, smart, a good friend, good with cars,
                     and bonus: has the most precious smile. Oh yeah and she's good at like a million things, so :). Plus
                     she's
-                    a great cat mom and girlfriend.
+                    a great cat mom and girlfriend. -->
                     <!-- It's gonna be me
                     Ooh, yeah
                     You might been hurt, babe

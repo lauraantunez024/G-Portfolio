@@ -5,24 +5,25 @@
 
             <!-- Can make a v-if ton change the font size of social media marketing to an h2 tag -->
 
-            <h1 data-aos="fade-right" data-aos-easing="ease-in-sine" data-aos-offset="300" data-aos-duration="3000"> {{
+            <h1 data-aos="fade-right" data-aos-easing="ease-in-sine" data-aos-offset="300" data-aos-duration="1000"> {{
                 splitTitle.firstHalf }} </h1>
-
-            <h1 data-aos="fade-left" data-aos-easing="ease-in-sine" data-aos-offset="300" data-aos-duration="3000"> {{
+         
+            <h1 id="second-title" data-aos="fade-left" data-aos-easing="ease-in-sine" data-aos-offset="300" data-aos-duration="1000"> {{
                 splitTitle.secondHalf }} </h1>
             <!-- <button @click="showLine"> test button </button> -->
 
         </div>
-        <div id="top">
-            <svg width='100%' height='100%' viewBox='0 0 100 100' xmlns="http://www.w3.org/2000/svg"
+        <div ref="linesContainer" id="top">
+            <svg v-if="linesVisible"
+            ref="animatedLine" :class="{ 'animate': isAnimated }" width='100%' height='100%' viewBox='0 0 100 100' xmlns="http://www.w3.org/2000/svg"
                 xmnls:xlink="http://www.w3.org/1999/xlink">
                 <line class="line" x1="-40" y1="100" x2="170" y2="0"
                     style=" stroke: rgb(61, 0, 61); stroke-width: 5px; fill: none;">
                 </line>
             </svg>
         </div>
-        <div id="middle">
-            <svg width='100%' height='100%' viewBox='0 0 100 100' xmlns="http://www.w3.org/2000/svg"
+        <div ref="linesContainer" id="middle">
+            <svg v-if="linesVisible" ref="animatedLine" :class="{ 'animate': isAnimated }" width='100%' height='100%' viewBox='0 0 100 100' xmlns="http://www.w3.org/2000/svg"
                 xmnls:xlink="http://www.w3.org/1999/xlink">
                 <line class="line" x1="-45" y1="50" x2="200" y2="50"
                     style=" stroke: rgb(61, 0, 61); stroke-width: 5px; fill: none;">
@@ -31,8 +32,8 @@
 
             </svg>
         </div>
-        <div id="bottom">
-            <svg width='100%' height='100%' viewBox='0 0 100 100' xmlns="http://www.w3.org/2000/svg"
+        <div ref="linesContainer" id="bottom">
+            <svg v-if="linesVisible" ref="animatedLine" :class="{ 'animate': isAnimated }" width='100%' height='100%' viewBox='0 0 100 100' xmlns="http://www.w3.org/2000/svg"
                 xmnls:xlink="http://www.w3.org/1999/xlink">
                 <line class="line" x1="-40" y1="0" x2="300" y2="150"
                     style=" stroke: rgb(61, 0, 61); stroke-width: 5px; fill: none;">
@@ -54,7 +55,7 @@
             </ul>
         </div>
         <div class="third-bullet">
-            <h2 id="third-title" data-aos="fade-left" data-aos-duration="2000" data-aos-delay="500" data-aos-easing="cubic belzier"> {{ thirdBullet }}</h2>
+            <h2 id="third-title" data-aos="fade-left" data-aos-duration="2000" data-aos-easing="cubic belzier"> {{ thirdBullet }}</h2>
         </div>
         <ul class="third-detail">
             <li v-for="(detail, index) in thirdDetails" :key="index" data-aos="fade-down" data-aos-easing="cubic belzier" data-aos-duration="2000" data-aos-delay="1500"> {{ detail }}</li>
@@ -68,9 +69,19 @@
 <script>
 export default {
     name: 'ServicesList',
+    mounted() {
+        const options = {
+            threshold: 0
+        };
+        const observer = new IntersectionObserver(this.handleIntersection, options);
+        observer.observe(this.$refs.linesContainer)
+
+    },
     data() {
         return {
             // showLine: false
+            isAnimated: false,
+            linesVisible: false
         }
     },
     props: {
@@ -112,8 +123,19 @@ export default {
                 firstHalf, secondHalf
             }
         }
+    },
+    methods: {
+        handleIntersection(entries) {
+            if (entries[0].isIntersecting) {
+                this.isAnimated = true;
+                this.linesVisible = true;
+            } else if (!entries[0].isIntersecting) {
+                this.isAnimated = false;
+                this.linesVisible = false;
+            }
+        }
     }
-
+   
 
 }
 
@@ -130,7 +152,9 @@ export default {
     background-color: gray;
 }
 
-
+/* .animate {
+    animation: draw-line 5s forwards;
+} */
 
 .title {
 
@@ -147,8 +171,9 @@ h1 {
     font-size: 5rem;
 }
 
-.line {
-    animation: top-line 5s linear forwards;
+.animate {
+    animation: top-line 4s linear forwards;
+    animation-delay: 1200ms;
     stroke-dasharray: 500;
     stroke-dashoffset: 500;
 
@@ -229,7 +254,9 @@ h2 {
 #third-title {
     grid-row-start: 4;
 }
-
+#second-title {
+    margin-left: 10px;
+}
 .third-detail {
     grid-column-start: 4;
     grid-column-end: 5;
@@ -246,6 +273,7 @@ h2 {
 
     to {
         stroke-dashoffset: 0;
+        
     }
 
 

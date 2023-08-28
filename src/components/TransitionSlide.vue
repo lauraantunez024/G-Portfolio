@@ -2,8 +2,11 @@
     <div class="container">
         <div class="content">
 
-            <h1 data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="3000"> {{ splitTitle.firstHalf }}</h1> <h1 data-aos="flip-right" data-aos-easing="ease-out-cubic" data-aos-duration="3000"> {{ splitTitle.secondHalf }}</h1> 
-                
+            <h1 data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="3000"> {{ splitTitle.firstHalf }}
+            </h1>
+            <h1 data-aos="flip-right" data-aos-easing="ease-out-cubic" data-aos-duration="3000" id="secondhalf"> {{ splitTitle.secondHalf }}
+            </h1>
+
 
         </div>
 
@@ -11,22 +14,22 @@
 </template>
 
 <script>
-    export default {
-        name: 'TransitionSlide',
-        props: ['title'],
-        computed: {
-            splitTitle() {
-                const words = this.title.split(' ');
-                const middleIndex = Math.floor(words.length / 2);
-                const firstHalf = words.slice(0, middleIndex).join(' ');
-                const secondHalf = words.slice(middleIndex).join(' ');
+export default {
+    name: 'TransitionSlide',
+    props: ['title'],
+    computed: {
+        splitTitle() {
+            const words = this.title.split(' ');
+            const middleIndex = Math.floor(words.length / 2);
+            const firstHalf = words.slice(0, middleIndex).join(' ');
+            const secondHalf = words.slice(middleIndex).join(' ');
 
-                return {
-                    firstHalf, secondHalf
-                }
+            return {
+                firstHalf, secondHalf
             }
         }
     }
+}
 </script>
 
 <style scoped>
@@ -42,6 +45,9 @@ h1 {
     margin: auto;
     font-size: 10rem;
 }
+/* #secondhalf {
+    margin-right: 15px;
+} */
 .content {
     width: 100vw;
     display: grid;
@@ -49,7 +55,4 @@ h1 {
     grid-row-start: 2;
 
 }
-
-
-
 </style>

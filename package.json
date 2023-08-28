@@ -23,6 +23,7 @@
     "twilio-cli": "^5.5.0",
     "vue": "^3.3.4",
     "vue-core-video-player": "^0.2.0",
+    "vue-intersect": "^1.1.6",
     "vue-router": "^4.2.2"
   },
   "devDependencies": {

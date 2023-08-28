@@ -4358,6 +4358,11 @@ vue-router@^4.2.2:
   dependencies:
     "@vue/devtools-api" "^6.5.0"
 
+vue-scroll-snap@^0.1.11:
+  version "0.1.11"
+  resolved "https://registry.yarnpkg.com/vue-scroll-snap/-/vue-scroll-snap-0.1.11.tgz#a3b0e53d67e3aeab0e3b2f3ffd6890059f152e35"
+  integrity sha512-4ak7oU7Tdrl8AgWcZa2wrQYCn68TVg+TQQmn0xfsKJ2my59MGEx21dGC5IrF3gD23rTyJHzHnaovTsKMOVVxiQ==
+
 vue@^2.6.10:
   version "2.7.14"
   resolved "https://registry.npmjs.org/vue/-/vue-2.7.14.tgz"

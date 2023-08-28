@@ -42,23 +42,49 @@
         </div>
 
         <div class="first-bullet">
-            <h2 id="first-title" data-aos="fade-left" data-aos-duration="2000" data-aos-offset="500" data-aos-delay="500" data-aos-easing="cubic belzier"> {{ firstBullet }}</h2>
+            <h2 id="first-title" 
+            data-aos="fade-left" 
+            data-aos-duration="1500" 
+            data-aos-offset="500" 
+            data-aos-delay="1500" 
+            data-aos-easing="ease-in-cubic"> {{ firstBullet }}</h2>
             <ul class="first-detail">
-                <li v-for="(detail, index) in firstDetails" :key="index" data-aos="fade-down" data-aos-easing="cubic belzier" data-aos-duration="2000" data-aos-delay="1500"> {{ detail }}</li>
+                <li v-for="(detail, index) in firstDetails" :key="index"
+                data-aos="fade-down" 
+                data-aos-easing="ease-in-cubic" 
+                data-aos-duration="1200" 
+                data-aos-delay="2000"> {{ detail }}</li>
             </ul>
 
         </div>
         <div class="second-bullet">
-            <h2 id="second-title" data-aos="fade-left" data-aos-duration="2000" data-aos-offset="500" data-aos-delay="500" data-aos-easing="cubic belzier"> {{ secondBullet }}</h2>
+            <h2 id="second-title" 
+            data-aos="fade-left" 
+            data-aos-duration="1500" 
+            data-aos-offset="500" 
+            data-aos-delay="1500" 
+            data-aos-easing="ease-in-cubic"> {{ secondBullet }}</h2>
             <ul class="second-detail">
-                <li v-for="(detail, index) in secondDetails" :key="index" data-aos="fade-down" data-aos-easing="cubic belzier" data-aos-duration="2000" data-aos-delay="1500"> {{ detail }} </li>
+                <li v-for="(detail, index) in secondDetails" :key="index" 
+                data-aos="fade-down" 
+                data-aos-easing="ease-in-cubic" 
+                data-aos-duration="1200" 
+                data-aos-delay="2000"> {{ detail }} </li>
             </ul>
         </div>
         <div class="third-bullet">
-            <h2 id="third-title" data-aos="fade-left" data-aos-duration="2000" data-aos-easing="cubic belzier"> {{ thirdBullet }}</h2>
+            <h2 id="third-title" 
+            data-aos="fade-left" 
+            data-aos-duration="1500" 
+            data-aos-delay="1500" 
+            data-aos-easing="ease-in-cubic"> {{ thirdBullet }}</h2>
         </div>
         <ul class="third-detail">
-            <li v-for="(detail, index) in thirdDetails" :key="index" data-aos="fade-down" data-aos-easing="cubic belzier" data-aos-duration="2000" data-aos-delay="1500"> {{ detail }}</li>
+            <li v-for="(detail, index) in thirdDetails" :key="index" 
+            data-aos="fade-down" 
+            data-aos-duration="1200" 
+            data-aos-easing="ease-in-cubic" 
+            data-aos-delay="2000"> {{ detail }}</li>
         </ul>
 
 
@@ -127,9 +153,11 @@ export default {
     methods: {
         handleIntersection(entries) {
             if (entries[0].isIntersecting) {
+
                 this.isAnimated = true;
                 this.linesVisible = true;
             } else if (!entries[0].isIntersecting) {
+                
                 this.isAnimated = false;
                 this.linesVisible = false;
             }
@@ -150,6 +178,8 @@ export default {
     grid-template-rows: repeat(5, 20%);
     grid-template-columns: 10% 30% 25% 25% 10%;
     background-color: gray;
+    border-bottom: 2px rgb(33, 31, 31) double;
+
 }
 
 /* .animate {
@@ -172,8 +202,8 @@ h1 {
 }
 
 .animate {
-    animation: top-line 4s linear forwards;
-    animation-delay: 1200ms;
+    animation: top-line 3000ms linear forwards;
+    animation-delay: 800ms;
     stroke-dasharray: 500;
     stroke-dashoffset: 500;
 

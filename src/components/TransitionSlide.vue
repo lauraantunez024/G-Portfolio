@@ -2,9 +2,15 @@
     <div class="container">
         <div class="content">
 
-            <h1 data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="3000"> {{ splitTitle.firstHalf }}
+            <h1 data-aos="flip-left" 
+            data-aos-delay="200"
+            data-aos-easing="ease-out-cubic" 
+            data-aos-duration="2000"> {{ splitTitle.firstHalf }}
             </h1>
-            <h1 data-aos="flip-right" data-aos-easing="ease-out-cubic" data-aos-duration="3000" id="secondhalf"> {{ splitTitle.secondHalf }}
+            <h1 data-aos="flip-right" 
+            data-aos-delay="200"
+            data-aos-easing="ease-out-cubic" 
+            data-aos-duration="2000" id="secondhalf"> {{ splitTitle.secondHalf }}
             </h1>
 
 
@@ -36,14 +42,15 @@ export default {
 .container {
     display: grid;
     height: 100vh;
-    grid-template-rows: repeat(5, 20%);
+    grid-template-rows: repeat(3, 1fr);
     background-color: gainsboro;
 }
 
 h1 {
     text-align: center;
     margin: auto;
-    font-size: 10rem;
+    font-size: 15rem;
+    font-family: Helvetica;
 }
 /* #secondhalf {
     margin-right: 15px;

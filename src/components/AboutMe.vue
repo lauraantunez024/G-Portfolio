@@ -5,7 +5,7 @@
                 <img src="../assets/alfred.jpg" alt="Alfred">
             </span>
 
-            <div class="aboutme-content" data-aos="fade-right" data-aos-duration="2000" data-aos-delay="1000">
+            <div class="aboutme-content" data-aos="fade-right" data-aos-duration="2000">
                 <p>
                     I like to spend my days sleeping and eating fishes that my human fished for me we live on a luxurious
                     yacht, sailing proudly under the sun, i like to walk on the deck, watching the horizon, dreaming of a
@@ -37,17 +37,17 @@
                 </p>
             </div>
             <div class="contactme-btn">
-                <span id="btn-container" data-aos="fade" data-aos-duration="2000" data-aos-delay="2000">
+                <span id="btn-container" data-aos="fade" data-aos-duration="1500" data-aos-delay="1200">
                     <router-link id="button" to="/contact">Contact Me</router-link>
                 </span>
 
             </div>
 
-            <h1 id="linkedin" data-aos="fade" data-aos-duration="2000" data-aos-delay="2000"
+            <h1 id="linkedin" data-aos="fade" data-aos-duration="1500" data-aos-delay="1500"
                 data-aos-anchor="#btn-container">
                 <a href="https://www.linkedin.com/in/grace-rolfe-40320223b/" target="_blank"> LinkedIn</a>
             </h1>
-            <h1 id="resume" data-aos="fade" data-aos-duration="2000" data-aos-delay="2000" data-aos-anchor="#btn-container">
+            <h1 id="resume" data-aos="fade" data-aos-duration="1500" data-aos-delay="1500" data-aos-anchor="#btn-container">
                 <a href="https://www.linkedin.com/in/grace-rolfe-40320223b/" target="_blank"> Resume</a>
             </h1>
 
@@ -69,6 +69,8 @@ export default {
 .container {
     /* display: grid; */
     height: 100vh;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
     /* grid-template-rows: repeat(5, 20%); */
 }
 
@@ -100,6 +102,7 @@ export default {
     margin-top: 10px;
     /* border: 2px rgb(61, 0, 61) solid; */
     padding: 20px;
+    scroll-snap-align: start;
 }
 
 #btn-container {

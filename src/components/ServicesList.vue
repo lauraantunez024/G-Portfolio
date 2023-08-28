@@ -101,29 +101,6 @@ export default {
             })
         }
     }
-    // methods: {
-    //     drawLine() {
-    //         this.showLine = true;
-    //     },
-
-    //     enter(el, done) {
-    //         const line = this.$refs.line;
-    //         const length = line.getTotalLength();
-    //         line.style.strokeDasharray = length + ' ' + length;
-    //         line.style.strokeDashoffset = length;
-    //         line.getBoundingClientRect();
-    //         line.style.transition = 'stroke-dashoffset 2s ease-in-out';
-    //         line.style.strokeLinecap = 'round';
-    //         line.style.strokeLinejoin = 'round';
-    //         line.style.strokeDashoffset = '0';
-    //         setTimeout(done, 2000);
-    //     },
-    //     leave(el, done) {
-    //         const line = this.$refs.line;
-    //         line.style.strokeDashoffset = line.getTotalLength();
-    //         setTimeout(done, 2000);
-    //     }
-    // }
 
 }
 
@@ -141,17 +118,6 @@ export default {
 }
 
 
-
-/* .line {
-    position: absolute;
-    top: 20%;
-    left: 0;
-    height: 2px;
-    background: transparent;
-    border-bottom: 2px dashed black;
-    width: 0;
-    transition: width 1s ease-out;
-} */
 
 .title {
     grid-column-start: 2;
@@ -211,13 +177,15 @@ h2 {
     grid-row-start: 1;
     grid-row-end: 2;
     display: grid;
-    grid-template-rows: 30% 10% 60%;
+    grid-template-rows: 10% 20% 10% 60%;
 }
 #first-title {
-    grid-row-start: 1;
+    grid-row-start: 2;
+    margin-top: 10px;
 }
 .first-detail {
-    grid-row-start: 3;
+    grid-row-start: 4;
+    margin-top: 20px;
 }
 .second-bullet {
     grid-column-start: 4;
@@ -226,6 +194,10 @@ h2 {
     grid-row-end: 4;
     display: grid;
     grid-template-rows: repeat(4, 1fr);
+}
+
+.second-detail {
+    margin-top: 20px;
 }
 .third-bullet {
     grid-column-start: 4;
@@ -244,6 +216,7 @@ h2 {
     grid-column-start: 4;
     grid-column-end: 5;
     grid-row-start: 5;
+    margin-top: 20px;
     
 }
 
@@ -252,9 +225,6 @@ h2 {
 
 @keyframes top-line {
 
-    /* from {
-        stroke-dashoffset: 500;
-    } */
 
     to {
         stroke-dashoffset: 0;

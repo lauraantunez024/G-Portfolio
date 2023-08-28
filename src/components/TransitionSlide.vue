@@ -45,7 +45,8 @@ h1 {
 .content {
     width: 100vw;
     display: grid;
-    grid-row-start: 3;
+    margin-top: 20px;
+    grid-row-start: 2;
 
 }
 

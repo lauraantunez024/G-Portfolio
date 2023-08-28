@@ -52,7 +52,7 @@ export default {
           ]
         },
         {
-          title: 'Social Media/ Marketing',
+          title: 'Social Media Marketing',
           descriptionTiles: [
             {
               text: 'Graphic Design',

@@ -6,7 +6,10 @@
             <!-- Can make a v-if ton change the font size of social media marketing to an h2 tag -->
 
             <h1 data-aos="fade-right" data-aos-easing="ease-in-sine" data-aos-offset="300" data-aos-duration="3000"> {{
-                title }} </h1>
+                splitTitle.firstHalf }} </h1>
+
+            <h1 data-aos="fade-left" data-aos-easing="ease-in-sine" data-aos-offset="300" data-aos-duration="3000"> {{
+                splitTitle.secondHalf }} </h1>
             <!-- <button @click="showLine"> test button </button> -->
 
         </div>
@@ -98,6 +101,18 @@ export default {
         }
 
     },
+    computed: {
+        splitTitle() {
+            const words = this.title.split(' ');
+            const middleIndex = Math.floor(words.length / 2);
+            const firstHalf = words.slice(0, middleIndex). join(' ');
+            const secondHalf = words.slice(middleIndex).join(' ');
+            
+            return {
+                firstHalf, secondHalf
+            }
+        }
+    }
 
 
 }

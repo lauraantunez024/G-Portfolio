@@ -7,54 +7,32 @@
 
             <div class="aboutme-content" data-aos="fade-right" data-aos-duration="2000" data-aos-delay="1000">
                 <p>
-                    I went with you up to the place you grew up
-                    And we spent a week in the cold
-                    Just long enough to Walden it with you
-                    Any longer, it would've got old
-                    Singin' "Ace of Spades" when Lemmy died
-                    But nothing's changed, L.A.'s alright
-                    I'm sleepin' in my bed again
-                    And gettin' in my head and then
-                    Walk around the reservoir
-                    You
-                    You must've been lookin' for me
-                    Sendin' smoke signals
-                    Pelicans circling
-                    Burnin' trash out on the beach
-                    One of your eyes is always half-shut
-                    Somethin' happened when you were a kid
-                    I didn't know you then and I'll never understand
-                    Why it feels like I did
-                    "How Soon Is Now" in an eighties sedan
-                    You slept inside of it because your dad
-                    Lived in a campground in the back of a van
-                    You said that song'll creep you out until you're dead
-                    And you
-                    Must've been lookin' for me
-                    Sendin' smoke signals
-                    Pelicans circling
-                    Burnin' trash out on the beach
-                    I wanna live at the Holiday Inn
-                    Where somebody else makes the bed
-                    We'll watch TV while the lights on the street
-                    Put all the stars to death
-                    It's been on my mind since Bowie died
-                    Just checking out to hide from life
-                    And all of our problems, I'm gonna solve 'em
-                    With you ridin' shotgun
-                    Speeding 'cause fuck the cops
-                    And you
-                    You must've been lookin' for me
-                    Sendin' smoke signals
-                    Pelicans circling
-                    Burnin' trash out on the beach
-                    Mm-mm
+                    I like to spend my days sleeping and eating fishes that my human fished for me we live on a luxurious
+                    yacht, sailing proudly under the sun, i like to walk on the deck, watching the horizon, dreaming of a
+                    good bowl of milk lick yarn hanging out of own butt experiences short bursts of poo-phoria after going
+                    to the loo for drink water out of the faucet for meowing non stop for food. Kitty power. Love and coo
+                    around boyfriend who purrs and makes the perfect moonlight eyes so i can purr and swat the glittery
+                    gleaming yarn to him (the yarn is from a $125 sweater) pooping rainbow while flying in a toasted bread
+                    costume in space and hate dog spread kitty litter all over house but chase red laser dot or spot
+                    something, big eyes, big eyes, crouch, shake butt, prepare to pounce stares at human while pushing stuff
+                    off a table. Floof tum, tickle bum, jellybean footies curly toes the dog smells bad. Damn that dog meow
+                    to be let out. Lick master's hand at first then bite because im moody. Spend all night ensuring people
+                    don't sleep sleep all day human is behind a closed door, emergency! abandoned! meeooowwww!!!, cats
+                    making all the muffins check cat door for ambush 10 times before coming in and spend all night ensuring
+                    people don't sleep sleep all day unwrap toilet paper cat mojo . Chase after silly colored fish toys
+                    around the house humans,humans, humans oh how much they love us felines we are the center of attention
+                    they feed, they clean yet if it fits, i sits so loved it, hated it, loved it, hated it purr while
+                    eating. Run off table persian cat jump eat fish mew mew or car rides are evil and flop over. Jump launch
+                    to pounce upon little yarn mouse, bare fangs at toy run hide in litter box until treats are fed i cry
+                    and cry and cry unless you pet me, and then maybe i cry just for fun, for bathe private parts with
+                    tongue then lick owner's face or open the door, let me out, let me out, let me-out, let me-aow, let
+                    meaow, meaow!
                     <!-- Grace is the best! You should hire her cause she's cute, funny, smart, a good friend, good with cars,
                     and bonus: has the most precious smile. Oh yeah and she's good at like a million things, so :). Plus
                     she's
                     a great cat mom and girlfriend. -->
-                 
-         
+
+
 
                 </p>
             </div>
@@ -65,7 +43,8 @@
 
             </div>
 
-            <h1 id="linkedin" data-aos="fade" data-aos-duration="2000" data-aos-delay="2000" data-aos-anchor="#btn-container">
+            <h1 id="linkedin" data-aos="fade" data-aos-duration="2000" data-aos-delay="2000"
+                data-aos-anchor="#btn-container">
                 <a href="https://www.linkedin.com/in/grace-rolfe-40320223b/" target="_blank"> LinkedIn</a>
             </h1>
             <h1 id="resume" data-aos="fade" data-aos-duration="2000" data-aos-delay="2000" data-aos-anchor="#btn-container">
@@ -176,5 +155,4 @@ export default {
 img {
     border-radius: 50%;
     width: 100%;
-}
-</style>
+}</style>

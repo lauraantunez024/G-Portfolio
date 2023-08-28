@@ -3,14 +3,19 @@
 
         <div class="title">
 
-            <!-- Can make a v-if ton change the font size of social media marketing to an h2 tag -->
 
-            <h1 data-aos="fade-right" data-aos-easing="ease-in-sine" data-aos-offset="300" data-aos-duration="1000"> {{
-                splitTitle.firstHalf }} </h1>
+            <h1 data-aos="fade-right" 
+            data-aos-easing="ease-in-sine" 
+            data-aos-offset="300" 
+            data-aos-duration="1000"> 
+            {{ splitTitle.firstHalf }} </h1>
          
-            <h1 id="second-title" data-aos="fade-left" data-aos-easing="ease-in-sine" data-aos-offset="300" data-aos-duration="1000"> {{
-                splitTitle.secondHalf }} </h1>
-            <!-- <button @click="showLine"> test button </button> -->
+            <h1 id="second-title" 
+            data-aos="fade-left" 
+            data-aos-easing="ease-in-sine" 
+            data-aos-offset="300" 
+            data-aos-duration="1000"> 
+            {{ splitTitle.secondHalf }} </h1>
 
         </div>
         <div ref="linesContainer" id="top">
@@ -117,15 +122,15 @@ export default {
         },
         firstBullet: {
             type: String,
-            // required: true
+            required: true
         },
         secondBullet: {
             type: String,
-            // required: true
+            required: true
         },
         thirdBullet: {
             type: String,
-            // required: true
+            required: true
         },
         firstDetails: {
             type: Array

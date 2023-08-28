@@ -1,8 +1,9 @@
 <template>
     <div class="container">
-        <div class="content" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="3000">
+        <div class="content">
 
-            <h1> {{ title }}</h1>
+            <h1 data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="3000"> {{ splitTitle.firstHalf }}</h1> <h1 data-aos="flip-right" data-aos-easing="ease-out-cubic" data-aos-duration="3000"> {{ splitTitle.secondHalf }}</h1> 
+                
 
         </div>
 
@@ -12,7 +13,19 @@
 <script>
     export default {
         name: 'TransitionSlide',
-        props: ['title']
+        props: ['title'],
+        computed: {
+            splitTitle() {
+                const words = this.title.split(' ');
+                const middleIndex = Math.floor(words.length / 2);
+                const firstHalf = words.slice(0, middleIndex).join(' ');
+                const secondHalf = words.slice(middleIndex).join(' ');
+
+                return {
+                    firstHalf, secondHalf
+                }
+            }
+        }
     }
 </script>
 

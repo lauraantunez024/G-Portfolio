@@ -59,16 +59,16 @@
                 </p>
             </div>
             <div class="contactme-btn">
-                <span id="btn-container">
+                <span id="btn-container" data-aos="fade" data-aos-duration="2000" data-aos-delay="2000">
                     <router-link id="button" to="/contact">Contact Me</router-link>
                 </span>
 
             </div>
 
-            <h1 id="linkedin">
+            <h1 id="linkedin" data-aos="fade" data-aos-duration="2000" data-aos-delay="2000" data-aos-anchor="#btn-container">
                 <a href="https://www.linkedin.com/in/grace-rolfe-40320223b/" target="_blank"> LinkedIn</a>
             </h1>
-            <h1 id="resume">
+            <h1 id="resume" data-aos="fade" data-aos-duration="2000" data-aos-delay="2000" data-aos-anchor="#btn-container">
                 <a href="https://www.linkedin.com/in/grace-rolfe-40320223b/" target="_blank"> Resume</a>
             </h1>
 

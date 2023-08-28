@@ -34,28 +34,23 @@
 
         <div class="first-bullet">
             <h2 id="first-title"> {{ firstBullet }}</h2>
-            <ul v-for="(tile, index) in Services[0].descriptionTiles">
-                <li v-for="(detail, index) in tile.details" :key="index"> {{ detail }}</li>
+            <ul class="first-detail">
+                <li v-for="(detail, index) in firstDetails" :key="index"> {{ detail }}</li>
             </ul>
 
         </div>
         <div class="second-bullet">
             <h2 id="second-title"> {{ secondBullet }}</h2>
-            <!-- <ul>
-                <li v-for="(detail, index) in Services[1].descriptionTiles.details "></li>
-            </ul> -->
-
-
-
+            <ul class="second-detail">
+                <li v-for="(detail, index) in secondDetails" :key="index"> {{ detail }}</li>
+            </ul>
         </div>
         <div class="third-bullet">
             <h2 id="third-title"> {{ thirdBullet }}</h2>
-            <!-- <ul>
-                <li v-for="(detail, index) in Services[2].descriptionTiles.details "> </li>
-            </ul> -->
-
-
         </div>
+        <ul class="third-detail">
+            <li v-for="(detail, index) in thirdDetails" :key="index"> {{ detail }}</li>
+        </ul>
 
 
 
@@ -87,7 +82,13 @@ export default {
             type: String,
             // required: true
         },
-        details: {
+        firstDetails: {
+            type: Array
+        },
+        secondDetails: {
+            type: Array
+        },
+        thirdDetails: {
             type: Array
         }
 
@@ -210,16 +211,21 @@ h2 {
     grid-row-start: 1;
     grid-row-end: 2;
     display: grid;
-    grid-template-rows: repeat(4, 1fr);
+    grid-template-rows: 30% 10% 60%;
 }
 #first-title {
-    grid-row-start: 2;
+    grid-row-start: 1;
+}
+.first-detail {
+    grid-row-start: 3;
 }
 .second-bullet {
     grid-column-start: 4;
     grid-column-end: 5;
     grid-row-start: 3;
     grid-row-end: 4;
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
 }
 .third-bullet {
     grid-column-start: 4;
@@ -232,6 +238,13 @@ h2 {
 
 #third-title {
     grid-row-start: 4;
+}
+
+.third-detail {
+    grid-column-start: 4;
+    grid-column-end: 5;
+    grid-row-start: 5;
+    
 }
 
 

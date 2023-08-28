@@ -12,6 +12,7 @@
   "dependencies": {
     "anime.css": "^1.0.1",
     "animejs": "^3.2.1",
+    "aos": "^2.3.4",
     "axios": "^1.4.0",
     "body-parser": "^1.20.2",
     "dotenv": "^16.3.1",

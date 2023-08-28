@@ -5,51 +5,56 @@
 
             <!-- Can make a v-if ton change the font size of social media marketing to an h2 tag -->
 
-            <h1 class="animate__animated animate__bounce"> {{ title }} </h1>
+            <h1 data-aos="fade-right" data-aos-easing="ease-in-sine" data-aos-offset="300" data-aos-duration="3000"> {{
+                title }} </h1>
             <!-- <button @click="showLine"> test button </button> -->
-            
+
         </div>
         <div id="top">
-            <svg width='100%' height='100%' viewBox='0 0 100 100' xmlns="http://www.w3.org/2000/svg" xmnls:xlink="http://www.w3.org/1999/xlink"> 
-               <line class="line" x1="-40" y1="100" x2="170" y2="0" style=" stroke: rgb(61, 0, 61); stroke-width: 5px; fill: none;"> 
-
-               </line>
-
+            <svg width='100%' height='100%' viewBox='0 0 100 100' xmlns="http://www.w3.org/2000/svg"
+                xmnls:xlink="http://www.w3.org/1999/xlink">
+                <line class="line" x1="-40" y1="100" x2="170" y2="0"
+                    style=" stroke: rgb(61, 0, 61); stroke-width: 5px; fill: none;">
+                </line>
             </svg>
         </div>
         <div id="middle">
-            <svg width='100%' height='100%' viewBox='0 0 100 100' xmlns="http://www.w3.org/2000/svg" xmnls:xlink="http://www.w3.org/1999/xlink"> 
-               <line class="line" x1="-45" y1="50" x2="200" y2="50" style=" stroke: rgb(61, 0, 61); stroke-width: 5px; fill: none;"> 
+            <svg width='100%' height='100%' viewBox='0 0 100 100' xmlns="http://www.w3.org/2000/svg"
+                xmnls:xlink="http://www.w3.org/1999/xlink">
+                <line class="line" x1="-45" y1="50" x2="200" y2="50"
+                    style=" stroke: rgb(61, 0, 61); stroke-width: 5px; fill: none;">
 
-               </line>
+                </line>
 
             </svg>
         </div>
         <div id="bottom">
-            <svg width='100%' height='100%' viewBox='0 0 100 100' xmlns="http://www.w3.org/2000/svg" xmnls:xlink="http://www.w3.org/1999/xlink"> 
-               <line class="line" x1="-40" y1="0" x2="300" y2="150" style=" stroke: rgb(61, 0, 61); stroke-width: 5px; fill: none;"> 
-               </line>
+            <svg width='100%' height='100%' viewBox='0 0 100 100' xmlns="http://www.w3.org/2000/svg"
+                xmnls:xlink="http://www.w3.org/1999/xlink">
+                <line class="line" x1="-40" y1="0" x2="300" y2="150"
+                    style=" stroke: rgb(61, 0, 61); stroke-width: 5px; fill: none;">
+                </line>
             </svg>
         </div>
 
         <div class="first-bullet">
-            <h2 id="first-title"> {{ firstBullet }}</h2>
+            <h2 id="first-title" data-aos="fade-left" data-aos-duration="2000" data-aos-offset="500" data-aos-delay="500" data-aos-easing="cubic belzier"> {{ firstBullet }}</h2>
             <ul class="first-detail">
-                <li v-for="(detail, index) in firstDetails" :key="index"> {{ detail }}</li>
+                <li v-for="(detail, index) in firstDetails" :key="index" data-aos="fade-down" data-aos-easing="cubic belzier" data-aos-duration="2000" data-aos-delay="1500"> {{ detail }}</li>
             </ul>
 
         </div>
         <div class="second-bullet">
-            <h2 id="second-title"> {{ secondBullet }}</h2>
+            <h2 id="second-title" data-aos="fade-left" data-aos-duration="2000" data-aos-offset="500" data-aos-delay="500" data-aos-easing="cubic belzier"> {{ secondBullet }}</h2>
             <ul class="second-detail">
-                <li v-for="(detail, index) in secondDetails" :key="index"> {{ detail }}</li>
+                <li v-for="(detail, index) in secondDetails" :key="index" data-aos="fade-down" data-aos-easing="cubic belzier" data-aos-duration="2000" data-aos-delay="1500"> {{ detail }} </li>
             </ul>
         </div>
         <div class="third-bullet">
-            <h2 id="third-title"> {{ thirdBullet }}</h2>
+            <h2 id="third-title" data-aos="fade-left" data-aos-duration="2000" data-aos-delay="500" data-aos-easing="cubic belzier"> {{ thirdBullet }}</h2>
         </div>
         <ul class="third-detail">
-            <li v-for="(detail, index) in thirdDetails" :key="index"> {{ detail }}</li>
+            <li v-for="(detail, index) in thirdDetails" :key="index" data-aos="fade-down" data-aos-easing="cubic belzier" data-aos-duration="2000" data-aos-delay="1500"> {{ detail }}</li>
         </ul>
 
 
@@ -93,14 +98,7 @@ export default {
         }
 
     },
-    methods: {
-        createTimeline() {
-            const timeline = this.$anime.timeline({
-                duration: 2000,
-                easing: '   '
-            })
-        }
-    }
+
 
 }
 
@@ -120,7 +118,8 @@ export default {
 
 
 .title {
-    grid-column-start: 2;
+
+    grid-column-start: 1;
     grid-column-end: 3;
     grid-row-start: 3;
     grid-row-end: 4;
@@ -134,9 +133,9 @@ h1 {
 }
 
 .line {
-    animation: top-line 10s linear forwards; 
+    animation: top-line 5s linear forwards;
     stroke-dasharray: 500;
-  stroke-dashoffset: 500;
+    stroke-dashoffset: 500;
 
 
 }
@@ -145,10 +144,10 @@ h2 {
     font-size: 2.5rem;
     text-align: center;
     font-weight: 500;
-    
+
 }
 
-#top{
+#top {
     grid-column-start: 3;
     grid-column-end: 4;
     grid-row-start: 2;
@@ -179,14 +178,17 @@ h2 {
     display: grid;
     grid-template-rows: 10% 20% 10% 60%;
 }
+
 #first-title {
     grid-row-start: 2;
     margin-top: 10px;
 }
+
 .first-detail {
     grid-row-start: 4;
     margin-top: 20px;
 }
+
 .second-bullet {
     grid-column-start: 4;
     grid-column-end: 5;
@@ -199,6 +201,7 @@ h2 {
 .second-detail {
     margin-top: 20px;
 }
+
 .third-bullet {
     grid-column-start: 4;
     grid-column-end: 5;
@@ -217,7 +220,7 @@ h2 {
     grid-column-end: 5;
     grid-row-start: 5;
     margin-top: 20px;
-    
+
 }
 
 
@@ -229,10 +232,6 @@ h2 {
     to {
         stroke-dashoffset: 0;
     }
-    
-
-}
 
 
-
-</style>
+}</style>

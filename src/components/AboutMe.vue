@@ -1,119 +1,76 @@
 <template>
     <div class="container">
         <div class="content">
-            <span class="headshot-image">
+            <span class="headshot-image" data-aos="fade-left" data-aos-duration="2000" data-aos-delay="500">
                 <img src="../assets/alfred.jpg" alt="Alfred">
             </span>
 
-            <div class="aboutme-content">
+            <div class="aboutme-content" data-aos="fade-right" data-aos-duration="2000" data-aos-delay="1000">
                 <p>
                     I went with you up to the place you grew up
-And we spent a week in the cold
-Just long enough to Walden it with you
-Any longer, it would've got old
-Singin' "Ace of Spades" when Lemmy died
-But nothing's changed, L.A.'s alright
-I'm sleepin' in my bed again
-And gettin' in my head and then
-Walk around the reservoir
-You
-You must've been lookin' for me
-Sendin' smoke signals
-Pelicans circling
-Burnin' trash out on the beach
-One of your eyes is always half-shut
-Somethin' happened when you were a kid
-I didn't know you then and I'll never understand
-Why it feels like I did
-"How Soon Is Now" in an eighties sedan
-You slept inside of it because your dad
-Lived in a campground in the back of a van
-You said that song'll creep you out until you're dead
-And you
-Must've been lookin' for me
-Sendin' smoke signals
-Pelicans circling
-Burnin' trash out on the beach
-I wanna live at the Holiday Inn
-Where somebody else makes the bed
-We'll watch TV while the lights on the street
-Put all the stars to death
-It's been on my mind since Bowie died
-Just checking out to hide from life
-And all of our problems, I'm gonna solve 'em
-With you ridin' shotgun
-Speeding 'cause fuck the cops
-And you
-You must've been lookin' for me
-Sendin' smoke signals
-Pelicans circling
-Burnin' trash out on the beach
-Mm-mm
+                    And we spent a week in the cold
+                    Just long enough to Walden it with you
+                    Any longer, it would've got old
+                    Singin' "Ace of Spades" when Lemmy died
+                    But nothing's changed, L.A.'s alright
+                    I'm sleepin' in my bed again
+                    And gettin' in my head and then
+                    Walk around the reservoir
+                    You
+                    You must've been lookin' for me
+                    Sendin' smoke signals
+                    Pelicans circling
+                    Burnin' trash out on the beach
+                    One of your eyes is always half-shut
+                    Somethin' happened when you were a kid
+                    I didn't know you then and I'll never understand
+                    Why it feels like I did
+                    "How Soon Is Now" in an eighties sedan
+                    You slept inside of it because your dad
+                    Lived in a campground in the back of a van
+                    You said that song'll creep you out until you're dead
+                    And you
+                    Must've been lookin' for me
+                    Sendin' smoke signals
+                    Pelicans circling
+                    Burnin' trash out on the beach
+                    I wanna live at the Holiday Inn
+                    Where somebody else makes the bed
+                    We'll watch TV while the lights on the street
+                    Put all the stars to death
+                    It's been on my mind since Bowie died
+                    Just checking out to hide from life
+                    And all of our problems, I'm gonna solve 'em
+                    With you ridin' shotgun
+                    Speeding 'cause fuck the cops
+                    And you
+                    You must've been lookin' for me
+                    Sendin' smoke signals
+                    Pelicans circling
+                    Burnin' trash out on the beach
+                    Mm-mm
                     <!-- Grace is the best! You should hire her cause she's cute, funny, smart, a good friend, good with cars,
                     and bonus: has the most precious smile. Oh yeah and she's good at like a million things, so :). Plus
                     she's
                     a great cat mom and girlfriend. -->
-                    <!-- It's gonna be me
-                    Ooh, yeah
-                    You might been hurt, babe
-                    That ain't no lie
-                    You've seen them all come and go, oh
-                    I remember you told me
-                    That it made you believe in
-                    No man, no cry
-                    Maybe that's why
-                    Every little thing I do
-                    Never seems enough for you
-                    You don't want to lose it again
-                    But I'm not like them
-                    Baby, when you finally
-                    Get to love somebody
-                    Guess what
-                    It's gonna be me
-                    You've got no choice, babe
-                    But to move on, and you know
-                    There ain't no time to waste
-                    You're just too blind to see
-                    But in the end, ya know it's gonna be me
-                    You can't deny
-                    So just tell me why Every little thing I do
-                    Never seems enough for you
-                    You don't want to lose it again
-                    But I'm not like them
-                    Baby, when you finally
-                    Get to love somebody (somebody)
-                    Guess what (guess what)
-                    It's gonna be me
-                    It's gonna be me
-                    Ooh, yeah yeah
-                    There comes a day
-                    When I'll be the one, you'll see
-                    It's gonna gonna gonna gonna
-                    It's gonna be me
-                    All that I do is not enough for you
-                    I don't want to lose it
-                    But I'm not like that
-                    When finally (finally)
-                    You get to love
-                    Guess what? (guess what?)
-                    It's gonna be me
-                   -->
+                 
+         
 
                 </p>
             </div>
             <div class="contactme-btn">
-                <span id="btn-container"> 
+                <span id="btn-container">
                     <router-link id="button" to="/contact">Contact Me</router-link>
                 </span>
-                
+
             </div>
 
             <h1 id="linkedin">
-                <a  href="https://www.linkedin.com/in/grace-rolfe-40320223b/" target="_blank"> LinkedIn</a>
+                <a href="https://www.linkedin.com/in/grace-rolfe-40320223b/" target="_blank"> LinkedIn</a>
             </h1>
-                <h1  id="resume">
-                    <a href="https://www.linkedin.com/in/grace-rolfe-40320223b/" target="_blank"> Resume</a>
-                </h1>
+            <h1 id="resume">
+                <a href="https://www.linkedin.com/in/grace-rolfe-40320223b/" target="_blank"> Resume</a>
+            </h1>
 
 
         </div>
@@ -131,9 +88,9 @@ export default {
 
 <style scoped>
 .container {
-    display: grid;
+    /* display: grid; */
     height: 100vh;
-    grid-template-rows: repeat(5, 20%);
+    /* grid-template-rows: repeat(5, 20%); */
 }
 
 .headshot-image {
@@ -146,7 +103,7 @@ export default {
 
 .content {
     width: 100vw;
-    height: 80vh;
+    height: 100vh;
     display: grid;
     grid-row-start: 2;
     grid-template-columns: 10% 50% 5% 25% 10%;
@@ -179,8 +136,9 @@ export default {
     border-radius: 50%;
     border: 3px black purple;
     padding: 30px;
-    background-color:rgba(61, 0, 61, 0.8);
+    background-color: rgba(61, 0, 61, 0.8);
 }
+
 
 
 

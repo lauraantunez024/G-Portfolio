@@ -1,13 +1,13 @@
 <template>
   <div>
+    <TransitionSlide title="About Me"/>
     <AboutMe />
-    <!-- <ServicesList :title="Services[0].title" :firstBullet="Services[0].descriptionTiles[0].text" :secondBullet="Services[0].descriptionTiles[1].text" :thirdBullet="Services[0].descriptionTiles[2].text" :details="Services[0].descriptionTiles.details"/>
-      <ServicesList :title="Services[0].title" :firstBullet="Services[0].descriptionTiles[0].text" :secondBullet="Services[0].descriptionTiles[1].text" :thirdBullet="Services[0].descriptionTiles[2].text" :details="Services[0].descriptionTiles.details"/>
-
-      <ServicesList :title="Services[1].title" :firstBullet="Services[1].descriptionTiles[0].text" :secondBullet="Services[1].descriptionTiles[1].text" :thirdBullet="Services[1].descriptionTiles[2].text"/>
-      <ServicesList :title="Services[2].title" :firstBullet="Services[2].descriptionTiles[0].text" :secondBullet="Services[2].descriptionTiles[1].text" :thirdBullet="Services[2].descriptionTiles[2].text"/> -->
-          <ServicesList
-          v-for="service in services" :key="service.id" :title="service.title" :firstBullet="service.descriptionTiles[0].text" :secondBullet="service.descriptionTiles[1].text" :thirdBullet="service.descriptionTiles[2].text" :firstDetails="service.descriptionTiles[0].details" :secondDetails="service.descriptionTiles[1].details" :thirdDetails="service.descriptionTiles[2].details"/>
+    <TransitionSlide title="Services List"/>
+    <ServicesList v-for="service in services" :key="service.id" :title="service.title"
+      :firstBullet="service.descriptionTiles[0].text" :secondBullet="service.descriptionTiles[1].text"
+      :thirdBullet="service.descriptionTiles[2].text" :firstDetails="service.descriptionTiles[0].details"
+      :secondDetails="service.descriptionTiles[1].details" :thirdDetails="service.descriptionTiles[2].details" />
+      <TransitionSlide title="Testimonials!"/>
     <MyTestimonials />
 
   </div>
@@ -17,6 +17,8 @@
 import AboutMe from '../components/AboutMe.vue';
 import MyTestimonials from '../components/MyTestimonials.vue';
 import ServicesList from '../components/ServicesList.vue';
+import TransitionSlide from '../components/TransitionSlide.vue';
+
 
 export default {
   data() {
@@ -116,9 +118,12 @@ export default {
   components: {
     AboutMe,
     MyTestimonials,
-    ServicesList
-  }
+    ServicesList,
+    TransitionSlide
+}
 }
 </script>
 
-<style scoped></style>
+<style scoped>
+
+</style>

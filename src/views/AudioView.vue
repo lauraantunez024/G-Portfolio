@@ -32,7 +32,7 @@
                 <div class="soundscape-buttons">
 
                 </div>
-                <div class="podcast-buttons">
+                <div class="podcast-buttons" >
                     <button id="cowboy-bebop" v-if="currentData.name !== 'Cowboy Bebop'"
                         @click="chooseData('cowboy-bebop')">Cowboy Bebop</button>
                     <button id="sweet-thing" v-if="currentData.name !== 'Sweet Thing'"
@@ -185,10 +185,11 @@ h1 {
 }
 
 .podcast-buttons {
-    grid-column-start: 2;
+    /* grid-column-start: 2;
     grid-column-end: 3;
     grid-row-start: 9;
-    grid-row-end: 10;
+    grid-row-end: 10; */
+    display: flex;
 
 }
 
@@ -226,8 +227,7 @@ audio {
     margin-left: 5%;
 }
 button {
-    height: 50%;
-    display: flex;
+    height: 100%;
 }
 
 .button-area {
@@ -235,8 +235,13 @@ button {
     grid-row-end: 10;
     grid-column-start: 2;
     grid-column-end: 5;
-    display: inline-grid;
+    display: block;
+    justify-self: center;
 
+}
+
+#cowboy-bebop, #spencer, #sweet-thing {
+    margin: auto;
 }
 
 audio::-webkit-media-controls-panel {

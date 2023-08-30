@@ -88,6 +88,7 @@ img {
     border-radius: 50%;
     justify-self: center;
     max-height: 100%;
+    display: flexbox;
 }
 .testimonial-container {
     grid-column-start: 3;
@@ -102,6 +103,7 @@ img {
     max-width: 100%;
     max-height: 100%;
     background-color: white;
+    overflow: auto;
 }
 
 .testimonial-content {
@@ -109,7 +111,10 @@ img {
     grid-column-end: 3;
     grid-row-start: 2;
     grid-row-end: 3;
+    overflow-y: scroll;
+    margin-bottom: 30px;
 }
+
 
 p {
     text-align: center;

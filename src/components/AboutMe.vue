@@ -105,6 +105,11 @@ export default {
     scroll-snap-align: start;
 }
 
+p {
+    overflow-y: scroll;
+
+}
+
 #btn-container {
 
     grid-row-start: 3;

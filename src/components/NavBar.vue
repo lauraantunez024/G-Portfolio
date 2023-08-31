@@ -3,10 +3,10 @@
             <div class="links">
                 <router-link id="home" to="/">Home</router-link>
                 <span class="dropdown">
-                    <button class="project-button" @mouseover="showDropdown = true">
-                        Projects </button>
+                    <a class="project-button" @mouseover="showDropdown = true">
+                        Projects </a>
                     <ul class="dropdown-items" v-if="showDropdown" @mouseleave="showDropdown = false">
-                        <li><router-link to="/projects/videos">Visual</router-link></li>
+                        <li><router-link to="/projects/videos">Videos</router-link></li>
                         <li><router-link to="/projects/audio">Audio</router-link></li>
                         <!-- <li><router-link to="/projects/graphic-design">Visual</router-link></li> -->
                     </ul>
@@ -32,21 +32,30 @@ export default {
 </script>
 
 <style scoped>
-
 .navbar {
     position: absolute;
-    top: 0;
     left: 0;
     width: 100%;
-    display: block;
+    display: flex;
     height: 20vh;
     background-color: rgb(61, 0, 61);
     top: 0;
-    display: inline-grid;
-    grid-template-columns: repeat(3, 33.33333%);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 33.333333%);
     justify-self: center;
     margin: auto;
-    grid-template-rows: auto;
+    /* grid-template-rows: auto; */   
+}
+
+ul {
+    list-style-type: none;
+    background-color: white;
+    border: 3px solid black;
+    padding: 0; 
+    margin: 0;
+    text-align: center;
+    
 }
 
 img {
@@ -56,17 +65,54 @@ img {
     grid-column-start: 2;
     grid-column-end: 3;
     justify-self: center;
-    margin-top: 5%;
+    margin-top: 3vh;
     background-color: seagreen;
 
     display: wrap;
 }
 
-button {
-    border: none;
-    color: seagreen;
-    background: none;
+.links {
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    font-size: 3vw;
+    display: flex;
+    gap: 20px;
+    margin-left: 2vw;
 }
+
+li:hover {
+    background-color: gray;
+}
+
+/* #contact {
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 3;
+    grid-column-end: 4;
+    display: flex;
+} */
+
+
+a {
+    border: none;
+    color: hsla(160, 100%, 37%, 1);
+    background: none;
+    font-size: 3vw;
+}
+</style>
+
+<!-- <style scoped>
+
+
+#home, .project-button {
+    /* display: flex; */
+    align-self: start;
+    
+
+}
+
 
 #contact, #home {
     color: seagreen;
@@ -79,7 +125,6 @@ button {
 
 button, .links {
     font-size: 3rem;
-    margin: auto;
 }
 
 ul {
@@ -89,16 +134,21 @@ ul {
     background-color: white;
     border: 3px solid black;
     list-style-type: none;
-    padding: 0;
+    padding: 0; 
     margin: 0;
 }
 
 
 .links {
-    position: relative;
-    
+    /* position: relative; */
     z-index: 100;
-}
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    display: flex;
+    flex-wrap: wrap;
+}   
 
 li {
     margin-left: 15px;
@@ -127,4 +177,4 @@ li.dropdown-items {
 #home {
     margin-left: 20px;
 }
-</style>
+</style> -->

@@ -88,7 +88,7 @@ img {
     border-radius: 50%;
     justify-self: center;
     max-height: 100%;
-    display: flexbox;
+    display: flex;
 }
 .testimonial-container {
     grid-column-start: 3;

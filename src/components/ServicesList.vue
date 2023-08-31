@@ -195,15 +195,17 @@ export default {
 
     grid-column-start: 1;
     grid-column-end: 3;
-    grid-row-start: 3;
-    grid-row-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 5;
+    flex-wrap: wrap;
     margin: auto;
     color: whitesmoke;
     display: flex;
+    overflow-y: hidden;
 }
 
 h1 {
-    font-size: 5rem;
+    font-size: 7vw;
 }
 
 .animate {
@@ -243,6 +245,10 @@ h2 {
     grid-row-start: 4;
     grid-row-end: 5;
 
+}
+
+.title {
+    margin-left: 5vw;
 }
 
 .first-bullet {

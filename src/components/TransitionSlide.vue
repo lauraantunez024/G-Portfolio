@@ -49,7 +49,7 @@ export default {
 h1 {
     text-align: center;
     margin: auto;
-    font-size: 15rem;
+    font-size: 12vw;
     font-family: Helvetica;
 }
 /* #secondhalf {

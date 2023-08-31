@@ -197,13 +197,14 @@ button:hover {
 
     max-height: 100%;
     display: flex;
-    flex-wrap: none;
     transform: skew(50deg);
     -webkit-transform: skew(50deg);
     margin-left: 10%;
     text-align: center;
     font-size: 1.5rem;
     font-family: 'Cheltenham Condensed';
+    grid-column-start: 3;
+    grid-column-end: 5;
 
 }
 
@@ -219,7 +220,7 @@ button:hover {
     grid-column-end: 3;
     grid-row-start: 2;
     grid-row-end: 7;
-    border: 3px black solid;
+    /* border: 3px black solid; */
     border-radius: 2%;
 
 
@@ -253,9 +254,10 @@ button:hover {
     grid-row-start: 2;
     grid-row-end: 4;
     width: 80%;
-    height: 100px;
+    height: 65%;
     transform: skew(-50deg);
     background-color: blanchedalmond;
+    overflow: hidden;
 }
 
 
@@ -283,7 +285,7 @@ audio {
 
 button {
     height: 100%;
-    border-radius: 3%;
+    border-radius: 50%;
 }
 
 .button-area {
@@ -298,12 +300,7 @@ button {
 
 }
 
-#cowboy-bebop,
-#spencer,
-#sweet-thing {
 
-    /* display: flexbox; */
-}
 
 button {
     background-color: cornflowerblue;

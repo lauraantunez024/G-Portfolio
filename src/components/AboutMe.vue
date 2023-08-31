@@ -103,6 +103,7 @@ export default {
     /* border: 2px rgb(61, 0, 61) solid; */
     padding: 20px;
     scroll-snap-align: start;
+    max-height: 107%;
 }
 
 p {

@@ -24,12 +24,6 @@ export default {
 
 <style scoped>
 
-.wrapper {
-  /* display: grid;
-  height: 100vh;
-  width: 100wv; */
-
-}
 
 
 

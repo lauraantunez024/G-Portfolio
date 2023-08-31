@@ -96,7 +96,7 @@ img {
     grid-row-start: 2;
     grid-row-end: 6;
     border-radius: 5%;
-    border: 2px black solid;
+    /* border: 2px black solid; */
     display: grid;
     grid-template-columns: 15% 70% 15%;
     grid-template-rows: 10% 50% 25% 15%;
@@ -148,7 +148,11 @@ p {
 
 .btn {
     border-radius: 3%;
-    font-size: 2rem;
+    font-size: 3vw;
+}
+
+button:hover {
+    background-color: mediumpurple;
 }
 #name {
     text-align: center;

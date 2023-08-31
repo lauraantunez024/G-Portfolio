@@ -1,11 +1,32 @@
 <template>
     <div class="container">
+        <div class="content">
+            <div class="title-container">
+
+                <h1> {{ currentTitle }}</h1>
+            </div>
+
+            <button class="btn-prev btn" @click="changeVideo('prev')">prev</button>
+            <div class="video-container">
+                <video controls>
+                    <source :src="currentVideo" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <span id="caption">
+                <p> {{ currentCaption }}</p>
+            </span>
+
+            <button class="btn-next btn" @click="changeVideo('next')">next</button> 
+
+        </div>
+
+
         <!-- Two buttons that will control the view whether podcasts are shown or sounds scapes v-show -->
 
 
         <!-- 
                     <h1> {{ currentType }} </h1>
-                    <button class="btn-prev btn" @click="changeVideo('prev')">⬅️</button>
                     <div class="video-container" ref="scrollContainer" :style="currentBackground">
                         <span><img class='title-image' :src="currentTitleImage" alt="test" :style="currentTitleImageStyle"></span>
                       
@@ -14,14 +35,14 @@
                             <p :style="currentPStyle"> {{ currentDescription }}</p>
                         </div>
                     </div>
-                    <button class="btn-next btn" @click="changeVideo('next')">➡️</button> -->
+                -->
 
     </div>
 </template>
 
 <script>
 
-import '../assets/sass/style.scss'
+// import '../assets/sass/style.scss'
 
 
 export default {
@@ -29,162 +50,58 @@ export default {
 
     data() {
         return {
-            // currentData: [
-            //     {
-            //         title: "COWBOY BEBOP FT. KAYLAN | AUG MEDIA PRODUCTION CLUB PODCAST EP.2",
-            //         type: 'Podcasts',
-            //         description: "Grace and guest Kaylan talk about Cowboy Bebop's lasting legacy in preparation for Netflix's live action spin on the show.",
-            //         path: cowboyAudio,
-            //         style: {
-            //             backgroundColor: '#3430A8',
-            //             color: '#CFCF39',
-            //         },
-            //         titleImage: cowboy,
-            //         titleImageStyle: {
-            //             margin: 'auto',
-            //             maxHeight: '17%',
-            //             backgroundColor: 'rgba(155, 31, 31, 1)',
-            //         },
-            //         captionStyle: {
-            //             // backgroundColor: 'rgba(0, 0, 0, 0.6)',
-            //             maxHeight: '25%',
-            //             marginTop: '15px'
-
-            //         },
-            //         headerStyle: {
-            //             fontSize: '1.75rem',
-            //             maxHeight: '25%',
-            //             paddingLeft: '15px',
-            //             paddingRight: '15px',
-            //             fontFamily: 'Cheltenham Condensed',
-
-
-            //         },
-            //         pStyle: {
-            //             font: '1rem',
-            //             padding: '5px',
-            //             maxWidth: '100%',
-            //             borderLeft: '#CFCF39 3px solid'
-
-            //         }
-            //     },
-            //     {
-            //         title: "Alexandre Rockwell's Sweet Thing | AUG Media Production Club Podcast Ep. 3",
-            //         type: 'Podcasts',
-            //         description: "Grace and Sarah discuss Alexandre Rockwell's most recent film, Sweet Thing, screening at the AUG Cinema Series at the Maxwell Theatre on 11/18. Mild spoilers may be discussed.",
-            //         path: sweetThingAudio,
-            //         style: {
-            //             backgroundColor: 'rgba(60, 24, 18)',
-            //             color: 'rgba(224, 184,  62)',
-            //         },
-            //         titleImage: sweetThing,
-            //         titleImageStyle: {
-            //             margin: 'auto',
-            //             height: '22%',
-
-
-            //         },
-            //         captionStyle: {
-
-            //             // backgroundColor: 'rgba(82, 104, 46, 0.6)',
-
-            //         },
-            //         headerStyle: {
-            //             fontFamily: 'Morgen'
-
-            //         },
-            //         pStyle: {
-            //             borderLeft: 'rgba(224, 184,  62) 3px solid',
-            //             paddingLeft: '15px'
-
-
-
-            //         }
-            //     },
-            //     {
-            //         title: "Pablo Larrain's Spencer | AUG Media Production Club Podcast Ep. 4",
-            //         type: 'Podcasts',
-            //         description: "Grace and Sarah discuss Alexandre Rockwell's most recent film, Sweet Thing, screening at the AUG Cinema Series at the Maxwell Theatre on 11/18. Mild spoilers may be discussed.",
-            //         path: spencerAudio,
-
-            //         style: {
-            //             backgroundColor: '#4A5275',
-            //             color: '#FDF5AA',
-            //         },
-            //         titleImage: spencer,
-            //         titleImageStyle: {
-            //             margin: 'auto',
-            //         },
-            //         headerStyle: {
-            //             fontFamily: 'Aviano Flare',
-            //             height: '15%'
-
-
-            //         },
-            //         captionStyle: {
-            //             maxHeight: '25%',
-            //             marginBottom: '10px'
-
-            //         },
-            //         pStyle: {
-            //             borderLeft: '#FDF5AA 3px solid',
-            //             paddingLeft: '25px'
-
-
-
-            //         }
-            //     }
-            // ],
+            videos: [
+                {
+                    name: 'First Video',
+                    path: '../assets/dmmy-vidoe.mp4',
+                    caption: 'This is the first video weeeeeee',
+                    titleImage: '',
+                    style: ''
+                },
+                {
+                    name: 'Second Video',
+                    path: '../assets/video_preview_h264.mp4',
+                    caption: 'Second Video RAAAAAAAAH',
+                    titleImage: '',
+                    style: ''
+                },
+            ],
             currentSlideIndex: 0
+           
+            
 
         }
     },
 
-    // computed: {
-    //     currentAudio() {
-    //         return this.currentData[this.currentSlideIndex].path;
-    //     },
-    //     currentBackground() {
-    //         return this.currentData[this.currentSlideIndex].style;
-    //     },
-    //     currentTitle() {
-    //         return this.currentData[this.currentSlideIndex].title;
-    //     },
-    //     currentDescription() {
-    //         return this.currentData[this.currentSlideIndex].description;
-    //     },
-    //     currentTitleImage() {
-    //         return this.currentData[this.currentSlideIndex].titleImage;
-    //     },
-    //     currentTitleImageStyle() {
-    //         return this.currentData[this.currentSlideIndex].titleImageStyle;
-    //     },
-    //     currentHeaderStyle() {
-    //         return this.currentData[this.currentSlideIndex].headerStyle
-    //     },
-    //     currentPStyle() {
-    //         return this.currentData[this.currentSlideIndex].pStyle
-    //     },
-    //     currentCaptionStyle() {
-    //         return this.currentData[this.currentSlideIndex].captionStyle
-    //     },
-    //     currentType() {
-    //         return this.currentData[this.currentSlideIndex].type
-    //     }
+    methods: {
+        changeVideo(action) {
+            if (action === 'prev') {
 
-    // },
-    // methods: {
-    //     changeVideo(action) {
-    //         if (action === 'prev') {
+                this.currentSlideIndex = (this.currentSlideIndex - 1 + this.videos.length) % this.videos.length
+            } else if (action === 'next') {
 
-    //             this.currentSlideIndex = (this.currentSlideIndex - 1 + this.currentData.length) % this.currentData.length
-    //         } else if (action === 'next') {
+                this.currentSlideIndex = (this.currentSlideIndex + 1) % this.videos.length
+            }
+        },
 
-    //             this.currentSlideIndex = (this.currentSlideIndex + 1) % this.currentData.length
-    //         }
-    //     },
-
-    // },
+    },
+    computed: {
+        currentVideo() {
+            return this.videos[this.currentSlideIndex].path;
+        },
+     
+        currentTitle() {
+            return this.videos[this.currentSlideIndex].name;
+        },
+        currentCaption() {
+            return this.videos[this.currentSlideIndex].caption;
+        },
+        currentTitleImage() {
+            return this.videos[this.currentSlideIndex].titleImage;
+        },
+    
+       
+    },
 
 
 
@@ -195,11 +112,87 @@ export default {
 
 .container {
 
-    display: grid;
-    grid-template-rows: repeat(5, 1fr);
-    width: 100vh;
-    height: 100vw;
+     display: grid;
+     grid-template-rows: repeat(5, 1fr);
+     /* grid-template-columns: repeat(5, 1fr); */
+     width: 100vw;
+     height: 100vh;
+ }
+
+ .content {
+     grid-row-start: 2;
+     grid-row-end: 6;
+     display: grid;
+     grid-template-columns: 10% 10% 60% 10% 10%;
+     grid-template-rows: repeat(5, 1fr);
+     width: 100vw;
+     height: 80vh;
+ }
+
+ .video-container {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 5;
+    display: flex;
+    justify-content: center;
+ }
+
+ .title-container {
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 3;
+    grid-column-end: 4;
+    text-align: center;
+    margin: auto;
+ }
+
+ h1 {
+    font-size: 5vw;
+ }
+
+ video {
+    height: 100%;
+ }
+
+ .btn {
+    height: 5vh;
+    width: 6vw;
+    margin: auto;
+    font-size: 2vw;
+ }
+
+
+
+ button:hover {
+    background-color: bisque;
+
+
+ }
+
+ .btn-prev {
+    grid-row-start: 3;
+    grid-row-end: 4;
+    grid-column-start: 2;
+    grid-column-end: 3;
+ }
+ .btn-next {
+    grid-row-start: 3;
+    grid-row-end: 4;
+    grid-column-start: 4;
+    grid-column-end: 5;
+
 }
+#caption {
+    grid-row-start: 5;
+    grid-row-end: 6;
+    grid-column-start: 3;
+    grid-column-end: 4;
+    text-align: center;
+    margin: auto;
+    font-size: 1.5vw;
+}
+
 </style>
 <!-- 
 <style scoped>

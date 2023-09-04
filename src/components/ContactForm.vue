@@ -97,6 +97,7 @@ export default {
     font-size: 3rem;
     border: 3px black solid;
     padding: 15px;
+    height: 55vh;
 }
 
 input {

@@ -42,6 +42,7 @@ export default {
 .container {
     display: grid;
     height: 100vh;
+    grid-template-rows: 15% 85%;
     /* grid-template-rows: repeat(3, 1fr); */
     background-color: gainsboro;
 }
@@ -57,9 +58,10 @@ h1 {
 } */
 .content {
     width: 100vw;
-    display: grid;
-    margin-top: 20px;
+    margin: auto;
+    /* display: grid; 
+    margin-top: 20px; */
     grid-row-start: 2;
-    grid-row-end: 4;
+    grid-row-end: 4; 
 }
 </style>

@@ -80,6 +80,7 @@ export default {
     grid-row-start: 2;
     grid-row-end: 5;
     display: flex;
+
 }
 
 .content {
@@ -103,7 +104,8 @@ export default {
     /* border: 2px rgb(61, 0, 61) solid; */
     padding: 20px;
     scroll-snap-align: start;
-    max-height: 107%;
+    max-height: 50vh;
+    display: flex;
 }
 
 p {
@@ -125,6 +127,9 @@ p {
     border: 3px black purple;
     padding: 30px;
     background-color: rgba(61, 0, 61, 0.8);
+    position: relative;
+    bottom: -9vh;
+    width: 3vw;
 }
 
 
@@ -151,6 +156,11 @@ p {
 
 }
 
+a {
+    position: relative;
+    bottom: -5vh;
+}
+
 .contactme-btn {
     display: grid;
     grid-row-start: 4;
@@ -163,5 +173,8 @@ p {
 
 img {
     border-radius: 50%;
-    width: 100%;
+    display: flex;
+    width: auto;
+    height: auto;
+    
 }</style>

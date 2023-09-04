@@ -25,63 +25,69 @@ export default {
     return {
       services: [
         {
-          title: 'Film Making',
+          title: 'Filmmaking',
           descriptionTiles: [
             {
-              text: 'Writing/Directing',
+              text: 'Screenwriting',
               details: [
-                'Wrote X number of screen plays',
-                'Directed XYZ'
+                'Developed and executed original: ', 
+                'Screenplays',
+                'Music video concepts',
+                'Concepts for informational videos and advertisements'
               ]
             },
             {
-              text: 'Film Degree from AU',
+              text: 'Bachelor of Fine Arts',
               details: [
-                'Graduated December 2023 with a degree in XXX',
-                'Screened a XXX minute long movie',
-                'Won a Telly for a cigarette commercial'
+                'Graduated December 2023 with BFA in Digital & Visual Storytelling',
+                'Awarded Silver Telly Award for "Birthdays" in Social Video Category',
+                'Awarded Best Videography in PSA Contest by Georgia Cancer Center'
               ]
             },
             {
-              text: 'Adobe Suite',
+              text: 'Directing',
               details: [
-                'Hates after effects so much',
-                'Likes premiere i guess?'
+                'Directed narrative short film productions',
+                'Directed music video productions',
+                'Directed informational and advertising video productions'
               ]
             }
           ]
         },
         {
-          title: 'Social Media Marketing',
+          title: 'Social Media Coordinator',
           descriptionTiles: [
             {
-              text: 'Graphic Design',
+              text: 'Content Creation',
               details: [
-                'Programs you know',
-                "# of social media posts you've done"
+                'Created and curated compelling content for various social media platforms',
+                "Used Canva and Adobe Suite to create graphics and videos for various social media platforms",
+                'Copywrote social media content and captions across social media platforms'
               ]
             },
             {
-              text: 'SEO Certified',
+              text: 'Social Media Management',
               details: [
-                'Date of Completion',
-                'Something you learned?'
+                'Managed and maintained various social media accounts',
+                'Developed and implemented a comprehensive social media content calendar',
+                ''
               ]
             },
             {
-              text: 'Office Babe',
+              text: 'Analytics & Reporting',
               details: [
-                'Cutest',
-                'Best Cat Secretaries'
+                'Utilized social media analytics tools to track performance metrics',
+                'Utilized social media analytics tools to optimize future social media efforts',
+                'Researching industry analytics, competitor accounts, and social media trends to plan content strategy'
               ]
             }
           ]
         },
         {
-          title: 'Audio Engineering',
+          title: 'Audio',
           descriptionTiles: [
             {
-              text: 'Thing 1',
+              text: 'Soundscape',
               details: [
                 'detail 1',
                 'detail 2',
@@ -89,7 +95,7 @@ export default {
               ]
             },
             {
-              text: 'Thing 2',
+              text: 'Podcast',
               details: [
                 'detail 1',
                 'detail 2',
@@ -97,7 +103,7 @@ export default {
               ]
             },
             {
-              text: 'Thing 3',
+              text: 'Video',
               details: [
                 'detail 1',
                 'detail 2',

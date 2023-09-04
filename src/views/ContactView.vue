@@ -7,7 +7,6 @@
 </template>
 
 <script>
-// import NavBar from '../components/NavBar.vue';
 import ContactForm from '../components/ContactForm.vue';
 export default {
   name: 'ContactView',
@@ -19,6 +18,10 @@ export default {
 
 </script>
 
-<style>
+<style scoped>
+h1 {
+  margin-top: 5vh;
+  margin-bottom: 2vh;
+}
 
 </style>

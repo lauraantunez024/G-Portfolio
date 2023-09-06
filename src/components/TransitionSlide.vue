@@ -1,18 +1,22 @@
 <template>
     <div class="container">
         <div class="content">
-
-            <h1 data-aos="flip-left" 
+            <!-- data-aos="flip-left" 
             data-aos-delay="200"
             data-aos-easing="ease-out-cubic" 
-            data-aos-duration="2000"> {{ splitTitle.firstHalf }}
-            </h1>
-            <h1 data-aos="flip-right" 
-            data-aos-delay="200"
-            data-aos-easing="ease-out-cubic" 
-            data-aos-duration="2000" id="secondhalf"> {{ splitTitle.secondHalf }}
-            </h1>
+            data-aos-duration="2000" -->
 
+            <h1 
+            > {{ splitTitle.firstHalf }}
+            </h1>
+            <h1 
+            > {{ splitTitle.secondHalf }}
+        </h1>
+        
+        <!-- data-aos="flip-right" 
+        data-aos-delay="200"
+        data-aos-easing="ease-out-cubic" 
+        data-aos-duration="2000" id="secondhalf" -->
 
         </div>
 

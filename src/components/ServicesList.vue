@@ -45,52 +45,55 @@
                 </line>
             </svg>
         </div>
+        <div class="bullets">
 
-        <div class="first-bullet">
-            <h2 id="first-title" 
-            data-aos="fade-left" 
-            data-aos-duration="1500" 
-            data-aos-offset="500" 
-            data-aos-delay="1500" 
-            data-aos-easing="ease-in-cubic"> {{ firstBullet }}</h2>
-            <ul class="first-detail">
-                <li v-for="(detail, index) in firstDetails" :key="index"
+            <div class="first-bullet">
+                <h2 id="first-title" 
+                data-aos="fade-left" 
+                data-aos-duration="1500" 
+                data-aos-offset="500" 
+                data-aos-delay="1500" 
+                data-aos-easing="ease-in-cubic"> {{ firstBullet }}</h2>
+                <ul class="first-detail">
+                    <li v-for="(detail, index) in firstDetails" :key="index"
+                    data-aos="fade-down" 
+                    data-aos-easing="ease-in-cubic" 
+                    data-aos-duration="1200" 
+                    data-aos-delay="2000"> {{ detail }}</li>
+                </ul>
+    
+            </div>
+            <div class="second-bullet">
+                <h2 id="second-title" 
+                data-aos="fade-left" 
+                data-aos-duration="1500" 
+                data-aos-offset="500" 
+                data-aos-delay="1500" 
+                data-aos-easing="ease-in-cubic"> {{ secondBullet }}</h2>
+                <ul class="second-detail">
+                    <li v-for="(detail, index) in secondDetails" :key="index" 
+                    data-aos="fade-down" 
+                    data-aos-easing="ease-in-cubic" 
+                    data-aos-duration="1200" 
+                    data-aos-delay="2000"> {{ detail }} </li>
+                </ul>
+            </div>
+            <div class="third-bullet">
+                <h2 id="third-title" 
+                data-aos="fade-left" 
+                data-aos-duration="1500" 
+                data-aos-delay="1500" 
+                data-aos-easing="ease-in-cubic"> {{ thirdBullet }}</h2>
+            </div>
+            <ul class="third-detail">
+                <li v-for="(detail, index) in thirdDetails" :key="index" 
                 data-aos="fade-down" 
-                data-aos-easing="ease-in-cubic" 
                 data-aos-duration="1200" 
+                data-aos-easing="ease-in-cubic" 
                 data-aos-delay="2000"> {{ detail }}</li>
             </ul>
+        </div>
 
-        </div>
-        <div class="second-bullet">
-            <h2 id="second-title" 
-            data-aos="fade-left" 
-            data-aos-duration="1500" 
-            data-aos-offset="500" 
-            data-aos-delay="1500" 
-            data-aos-easing="ease-in-cubic"> {{ secondBullet }}</h2>
-            <ul class="second-detail">
-                <li v-for="(detail, index) in secondDetails" :key="index" 
-                data-aos="fade-down" 
-                data-aos-easing="ease-in-cubic" 
-                data-aos-duration="1200" 
-                data-aos-delay="2000"> {{ detail }} </li>
-            </ul>
-        </div>
-        <div class="third-bullet">
-            <h2 id="third-title" 
-            data-aos="fade-left" 
-            data-aos-duration="1500" 
-            data-aos-delay="1500" 
-            data-aos-easing="ease-in-cubic"> {{ thirdBullet }}</h2>
-        </div>
-        <ul class="third-detail">
-            <li v-for="(detail, index) in thirdDetails" :key="index" 
-            data-aos="fade-down" 
-            data-aos-duration="1200" 
-            data-aos-easing="ease-in-cubic" 
-            data-aos-delay="2000"> {{ detail }}</li>
-        </ul>
 
 
 
@@ -239,6 +242,14 @@ h2 {
 
 }
 
+.bullets {
+    grid-column-start: 4;
+    grid-column-end: 5;
+    grid-row-start: 1;
+    grid-row-start: 5;
+    display: flex;
+}
+
 #bottom {
     grid-column-start: 3;
     grid-column-end: 4;
@@ -257,7 +268,7 @@ h2 {
     grid-row-start: 1;
     grid-row-end: 2;
     display: grid;
-    grid-template-rows: 10% 20% 10% 60%;
+    /* grid-template-rows: 10% 20% 10% 60%; */
 }
 
 #first-title {

@@ -1,5 +1,10 @@
 <template>
     <nav class="navbar">
+        <div class="mobile-menu">
+
+        </div>
+        <div class="desktop-menu">
+
             <div class="links">
                 <router-link id="home" to="/">Home</router-link>
                 <span class="dropdown">
@@ -13,7 +18,8 @@
                 </span>
                 <router-link id="contact" to="/contact">Contact</router-link>
             </div>
-            <img height='250' src="../assets/mothman_cute.png" alt="cute mothman icon">
+            <img src="../assets/mothman_cute.png" alt="cute mothman icon">
+        </div>
     </nav>
 </template>
 
@@ -32,74 +38,67 @@ export default {
 </script>
 
 <style scoped>
+
 .navbar {
     position: absolute;
     left: 0;
     width: 100%;
     display: flex;
-    height: 20vh;
-    background-color: rgb(61, 0, 61);
+    height: 15vh;
+    background-image: linear-gradient(rgb(61, 0, 61) 90%, gainsboro);
     top: 0;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 33.333333%);
     justify-self: center;
     margin: auto;
-    /* grid-template-rows: auto; */   
 }
 
 ul {
     list-style-type: none;
     background-color: white;
-    border: 3px solid black;
     padding: 0; 
     margin: 0;
     text-align: center;
     
 }
 
+li {
+    opacity: 1;
+    
+}
+
 img {
-    margin: auto;
     position: absolute;
-    max-height: 70%;
-    grid-column-start: 2;
-    grid-column-end: 3;
-    justify-self: center;
+    max-height: calc(10vh * (7/5));
+    top: -4vh;
     margin-top: 3vh;
-    background-color: seagreen;
+    margin-left: -30vw;
+    /* background-color: seagreen; */
 
     display: wrap;
 }
 
 .links {
-    grid-row-start: 2;
-    grid-row-end: 3;
     grid-column-start: 1;
     grid-column-end: 4;
-    font-size: 3vw;
+    font-size: 1rem;
     display: flex;
     gap: 20px;
     margin-left: 2vw;
+    margin-top: 2.5vh;
 }
 
 li:hover {
-    background-color: gray;
+    background-image: radial-gradient(gray, gainsboro 70%);
 }
-
-/* #contact {
-    grid-row-start: 2;
-    grid-row-end: 3;
-    grid-column-start: 3;
-    grid-column-end: 4;
-    display: flex;
-} */
 
 
 a {
     border: none;
     color: hsla(160, 100%, 37%, 1);
     background: none;
-    font-size: 3vw;
+    font-size: 4rem;
+
 }
 </style>
 

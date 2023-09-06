@@ -6,35 +6,90 @@
             </span>
 
             <div class="aboutme-content" data-aos="fade-right" data-aos-duration="2000">
-                <p>
-                    I like to spend my days sleeping and eating fishes that my human fished for me we live on a luxurious
-                    yacht, sailing proudly under the sun, i like to walk on the deck, watching the horizon, dreaming of a
-                    good bowl of milk lick yarn hanging out of own butt experiences short bursts of poo-phoria after going
-                    to the loo for drink water out of the faucet for meowing non stop for food. Kitty power. Love and coo
-                    around boyfriend who purrs and makes the perfect moonlight eyes so i can purr and swat the glittery
-                    gleaming yarn to him (the yarn is from a $125 sweater) pooping rainbow while flying in a toasted bread
-                    costume in space and hate dog spread kitty litter all over house but chase red laser dot or spot
-                    something, big eyes, big eyes, crouch, shake butt, prepare to pounce stares at human while pushing stuff
-                    off a table. Floof tum, tickle bum, jellybean footies curly toes the dog smells bad. Damn that dog meow
-                    to be let out. Lick master's hand at first then bite because im moody. Spend all night ensuring people
-                    don't sleep sleep all day human is behind a closed door, emergency! abandoned! meeooowwww!!!, cats
-                    making all the muffins check cat door for ambush 10 times before coming in and spend all night ensuring
-                    people don't sleep sleep all day unwrap toilet paper cat mojo . Chase after silly colored fish toys
-                    around the house humans,humans, humans oh how much they love us felines we are the center of attention
-                    they feed, they clean yet if it fits, i sits so loved it, hated it, loved it, hated it purr while
-                    eating. Run off table persian cat jump eat fish mew mew or car rides are evil and flop over. Jump launch
-                    to pounce upon little yarn mouse, bare fangs at toy run hide in litter box until treats are fed i cry
-                    and cry and cry unless you pet me, and then maybe i cry just for fun, for bathe private parts with
-                    tongue then lick owner's face or open the door, let me out, let me out, let me-out, let me-aow, let
-                    meaow, meaow!
-                    <!-- Grace is the best! You should hire her cause she's cute, funny, smart, a good friend, good with cars,
-                    and bonus: has the most precious smile. Oh yeah and she's good at like a million things, so :). Plus
-                    she's
-                    a great cat mom and girlfriend. -->
-
-
-
+                <p> Hey there! I'm Grace, a passionate student on a creative journey. My story revolves around
+                    the world of Digital and Visual Storytelling. Currently pursuing a Bachelor of Fine Arts at Augusta
+                    University in Augusta, GA, I'm set to graduate in December 2023.
                 </p>
+                <br>
+                <!-- <h3> Skills Snapshot </h3>
+                <ul>
+                    <li>
+                        Instructing 🎓
+                    </li>
+                    <li>
+                        Videography 🎥
+                    </li>
+                    <li>
+                        Audio Engineering 🎙️
+
+                    </li>
+                    <li>
+                        Social Media Management 📱
+
+                    </li>
+                    <li>
+                        Adobe Creative Cloud 🎨
+
+                    </li>
+                    <li>
+                        Final Cut Pro 🎬
+
+                    </li>
+                    <li>
+                        Social Media Management 📱
+
+                    </li>
+                </ul> 
+            <br>
+        -->
+
+
+                <h3> My Journey </h3>
+
+                <p> My experience extends across various roles, where I've thrived in the realm of media and content
+                    creation. As a Television & Cinema Lab Assistant at Augusta University, I assisted professors in film
+                    classes, managed equipment scheduling, and played a part in video and audio productions.
+
+                    During my remote stint as a Social Media Coordinator at Who'z Nxt in Pleasanton, CA, I crafted
+                    eye-catching graphics and videos, wrote compelling social media content, and stayed ahead of industry
+                    trends.
+
+                    I also served as a Communications & Marketing Student Assistant at Augusta University, where I edited
+                    podcast episodes and created promotional videos. I even stepped up to manage social media during my
+                    supervisor's absence, ensuring our online presence remained vibrant.
+
+                    As a Keyholder and Social Media Manager at BoxLunch, I took charge of store operations and created
+                    engaging photo and video content to boost our online presence. </p>
+                <br>
+                <h3> Achievements & Accolades </h3>
+
+                <ul>
+                    <li>
+                        Secretary of the Media Production Club at Augusta University.
+                    </li>
+                    <li>
+                        Host and Chief Editor of the Media Production Club Podcast.
+                    </li>
+                    <li>
+                        Proud recipient of the Silver Telly Award for "Birthdays" in the Social Video Category.
+                    </li>
+                    <li>
+                        Honored with the Katherine Reese Pamplin Award for Artistic Achievement in Filmmaking at Augusta
+                        University.
+                    </li>
+                    <li>
+                        Winner of the Best Videography award in the PSA Contest held by the Georgia Cancer Center.
+                    </li>
+                </ul>
+
+                <br>
+                <p> My journey is all about creativity, storytelling, and the power of media. Join me as I continue to
+                    explore the fascinating world of digital narratives! </p>
+
+
+
+
+
             </div>
             <div class="contactme-btn">
                 <span id="btn-container" data-aos="fade" data-aos-duration="1500" data-aos-delay="1200">
@@ -48,7 +103,7 @@
                 <a href="https://www.linkedin.com/in/grace-rolfe-40320223b/" target="_blank"> LinkedIn</a>
             </h1>
             <h1 id="resume" data-aos="fade" data-aos-duration="1500" data-aos-delay="1500" data-aos-anchor="#btn-container">
-                <a href="https://www.linkedin.com/in/grace-rolfe-40320223b/" target="_blank"> Resume</a>
+                <a href="../../public/resume.pdf" target="_blank"> Resume</a>
             </h1>
 
 
@@ -104,8 +159,8 @@ export default {
     /* border: 2px rgb(61, 0, 61) solid; */
     padding: 20px;
     scroll-snap-align: start;
+    overflow-y: scroll;
     max-height: 50vh;
-    display: flex;
 }
 
 p {
@@ -176,5 +231,6 @@ img {
     display: flex;
     width: auto;
     height: auto;
-    
-}</style>
+
+}
+</style>
